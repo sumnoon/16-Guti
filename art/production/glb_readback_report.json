@@ -1,0 +1,734 @@
+[
+  {
+    "name": "guti_clay_shard_col",
+    "file": "models/collision/guti_clay_shard_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_dark_col",
+    "file": "models/collision/guti_pebble_dark_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_light_col",
+    "file": "models/collision/guti_pebble_light_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_variations_col",
+    "file": "models/collision/guti_pebble_variations_col.glb",
+    "readback": "PASS",
+    "triangles": 384,
+    "mesh_objects": 6,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_tamarind_seed_col",
+    "file": "models/collision/guti_tamarind_seed_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banana_tree_col",
+    "file": "models/collision/prop_banana_tree_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banyan_tree_col",
+    "file": "models/collision/prop_banyan_tree_col.glb",
+    "readback": "PASS",
+    "triangles": 128,
+    "mesh_objects": 2,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chicken_col",
+    "file": "models/collision/prop_chicken_col.glb",
+    "readback": "PASS",
+    "triangles": 24,
+    "mesh_objects": 2,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chouki_col",
+    "file": "models/collision/prop_chouki_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chula_col",
+    "file": "models/collision/prop_chula_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_clothesline_col",
+    "file": "models/collision/prop_clothesline_col.glb",
+    "readback": "PASS",
+    "triangles": 128,
+    "mesh_objects": 2,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_dala_col",
+    "file": "models/collision/prop_dala_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_fence_col",
+    "file": "models/collision/prop_fence_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_haystack_col",
+    "file": "models/collision/prop_haystack_col.glb",
+    "readback": "PASS",
+    "triangles": 256,
+    "mesh_objects": 4,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_house_col",
+    "file": "models/collision/prop_house_col.glb",
+    "readback": "PASS",
+    "triangles": 228,
+    "mesh_objects": 6,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_jharu_col",
+    "file": "models/collision/prop_jharu_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kolshi_col",
+    "file": "models/collision/prop_kolshi_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kula_col",
+    "file": "models/collision/prop_kula_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_lantern_col",
+    "file": "models/collision/prop_lantern_col.glb",
+    "readback": "PASS",
+    "triangles": 64,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pati_col",
+    "file": "models/collision/prop_pati_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_piri_col",
+    "file": "models/collision/prop_piri_col.glb",
+    "readback": "PASS",
+    "triangles": 12,
+    "mesh_objects": 1,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pots_col",
+    "file": "models/collision/prop_pots_col.glb",
+    "readback": "PASS",
+    "triangles": 192,
+    "mesh_objects": 3,
+    "embedded_images": 0,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_clay_shard",
+    "file": "models/guti_clay_shard.glb",
+    "readback": "PASS",
+    "triangles": 616,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_dark",
+    "file": "models/guti_pebble_dark.glb",
+    "readback": "PASS",
+    "triangles": 960,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_light",
+    "file": "models/guti_pebble_light.glb",
+    "readback": "PASS",
+    "triangles": 960,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_pebble_variations",
+    "file": "models/guti_pebble_variations.glb",
+    "readback": "PASS",
+    "triangles": 4368,
+    "mesh_objects": 6,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "guti_tamarind_seed",
+    "file": "models/guti_tamarind_seed.glb",
+    "readback": "PASS",
+    "triangles": 848,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banana_tree_lod1",
+    "file": "models/lod/prop_banana_tree_lod1.glb",
+    "readback": "PASS",
+    "triangles": 734,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banana_tree_lod2",
+    "file": "models/lod/prop_banana_tree_lod2.glb",
+    "readback": "PASS",
+    "triangles": 494,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banyan_tree_lod1",
+    "file": "models/lod/prop_banyan_tree_lod1.glb",
+    "readback": "PASS",
+    "triangles": 23454,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banyan_tree_lod2",
+    "file": "models/lod/prop_banyan_tree_lod2.glb",
+    "readback": "PASS",
+    "triangles": 12474,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chicken_lod1",
+    "file": "models/lod/prop_chicken_lod1.glb",
+    "readback": "PASS",
+    "triangles": 1172,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 6,
+    "animations": [
+      "idle",
+      "peck",
+      "walk"
+    ]
+  },
+  {
+    "name": "prop_chicken_lod2",
+    "file": "models/lod/prop_chicken_lod2.glb",
+    "readback": "PASS",
+    "triangles": 834,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 6,
+    "animations": [
+      "idle",
+      "peck",
+      "walk"
+    ]
+  },
+  {
+    "name": "prop_chula_lod1",
+    "file": "models/lod/prop_chula_lod1.glb",
+    "readback": "PASS",
+    "triangles": 520,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chula_lod2",
+    "file": "models/lod/prop_chula_lod2.glb",
+    "readback": "PASS",
+    "triangles": 320,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_clothesline_lod1",
+    "file": "models/lod/prop_clothesline_lod1.glb",
+    "readback": "PASS",
+    "triangles": 586,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_clothesline_lod2",
+    "file": "models/lod/prop_clothesline_lod2.glb",
+    "readback": "PASS",
+    "triangles": 290,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_dala_lod1",
+    "file": "models/lod/prop_dala_lod1.glb",
+    "readback": "PASS",
+    "triangles": 528,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_dala_lod2",
+    "file": "models/lod/prop_dala_lod2.glb",
+    "readback": "PASS",
+    "triangles": 264,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_fence_lod1",
+    "file": "models/lod/prop_fence_lod1.glb",
+    "readback": "PASS",
+    "triangles": 1914,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_haystack_lod1",
+    "file": "models/lod/prop_haystack_lod1.glb",
+    "readback": "PASS",
+    "triangles": 1796,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_haystack_lod2",
+    "file": "models/lod/prop_haystack_lod2.glb",
+    "readback": "PASS",
+    "triangles": 900,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_house_lod1",
+    "file": "models/lod/prop_house_lod1.glb",
+    "readback": "PASS",
+    "triangles": 412,
+    "mesh_objects": 1,
+    "embedded_images": 8,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_jharu_lod1",
+    "file": "models/lod/prop_jharu_lod1.glb",
+    "readback": "PASS",
+    "triangles": 468,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_jharu_lod2",
+    "file": "models/lod/prop_jharu_lod2.glb",
+    "readback": "PASS",
+    "triangles": 288,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kolshi_lod1",
+    "file": "models/lod/prop_kolshi_lod1.glb",
+    "readback": "PASS",
+    "triangles": 640,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kolshi_lod2",
+    "file": "models/lod/prop_kolshi_lod2.glb",
+    "readback": "PASS",
+    "triangles": 320,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kula_lod1",
+    "file": "models/lod/prop_kula_lod1.glb",
+    "readback": "PASS",
+    "triangles": 432,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kula_lod2",
+    "file": "models/lod/prop_kula_lod2.glb",
+    "readback": "PASS",
+    "triangles": 216,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_lantern_lod1",
+    "file": "models/lod/prop_lantern_lod1.glb",
+    "readback": "PASS",
+    "triangles": 716,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_lantern_lod2",
+    "file": "models/lod/prop_lantern_lod2.glb",
+    "readback": "PASS",
+    "triangles": 388,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pati_lod1",
+    "file": "models/lod/prop_pati_lod1.glb",
+    "readback": "PASS",
+    "triangles": 648,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pati_lod2",
+    "file": "models/lod/prop_pati_lod2.glb",
+    "readback": "PASS",
+    "triangles": 48,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pots_lod1",
+    "file": "models/lod/prop_pots_lod1.glb",
+    "readback": "PASS",
+    "triangles": 1344,
+    "mesh_objects": 3,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pots_lod2",
+    "file": "models/lod/prop_pots_lod2.glb",
+    "readback": "PASS",
+    "triangles": 672,
+    "mesh_objects": 3,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banana_tree",
+    "file": "models/prop_banana_tree.glb",
+    "readback": "PASS",
+    "triangles": 1954,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_banyan_tree",
+    "file": "models/prop_banyan_tree.glb",
+    "readback": "PASS",
+    "triangles": 46218,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chicken",
+    "file": "models/prop_chicken.glb",
+    "readback": "PASS",
+    "triangles": 3780,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 6,
+    "animations": [
+      "idle",
+      "peck",
+      "walk"
+    ]
+  },
+  {
+    "name": "prop_chouki",
+    "file": "models/prop_chouki.glb",
+    "readback": "PASS",
+    "triangles": 216,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_chula",
+    "file": "models/prop_chula.glb",
+    "readback": "PASS",
+    "triangles": 1172,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_clothesline",
+    "file": "models/prop_clothesline.glb",
+    "readback": "PASS",
+    "triangles": 1830,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_dala",
+    "file": "models/prop_dala.glb",
+    "readback": "PASS",
+    "triangles": 1344,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_fence",
+    "file": "models/prop_fence.glb",
+    "readback": "PASS",
+    "triangles": 2616,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_haystack",
+    "file": "models/prop_haystack.glb",
+    "readback": "PASS",
+    "triangles": 3592,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_house",
+    "file": "models/prop_house.glb",
+    "readback": "PASS",
+    "triangles": 964,
+    "mesh_objects": 1,
+    "embedded_images": 8,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_jharu",
+    "file": "models/prop_jharu.glb",
+    "readback": "PASS",
+    "triangles": 1152,
+    "mesh_objects": 1,
+    "embedded_images": 4,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kolshi",
+    "file": "models/prop_kolshi.glb",
+    "readback": "PASS",
+    "triangles": 1280,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_kula",
+    "file": "models/prop_kula.glb",
+    "readback": "PASS",
+    "triangles": 1152,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_lantern",
+    "file": "models/prop_lantern.glb",
+    "readback": "PASS",
+    "triangles": 1888,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pati",
+    "file": "models/prop_pati.glb",
+    "readback": "PASS",
+    "triangles": 1704,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_piri",
+    "file": "models/prop_piri.glb",
+    "readback": "PASS",
+    "triangles": 60,
+    "mesh_objects": 1,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  },
+  {
+    "name": "prop_pots",
+    "file": "models/prop_pots.glb",
+    "readback": "PASS",
+    "triangles": 2688,
+    "mesh_objects": 3,
+    "embedded_images": 2,
+    "joints": 0,
+    "animations": []
+  }
+]

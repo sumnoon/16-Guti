@@ -1,0 +1,726 @@
+[
+  {
+    "name": "guti_pebble_dark",
+    "triangles": 960,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 256,
+    "bytes": 88876,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.021,
+        0.012
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false,
+    "collision": {
+      "file": "models/collision/guti_pebble_dark_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": []
+  },
+  {
+    "name": "guti_pebble_light",
+    "triangles": 960,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 256,
+    "bytes": 88880,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.021,
+        0.012
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false,
+    "collision": {
+      "file": "models/collision/guti_pebble_light_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": []
+  },
+  {
+    "name": "guti_pebble_variations",
+    "triangles": 4368,
+    "objects": 6,
+    "embedded_images": 2,
+    "texture_px": 256,
+    "bytes": 212220,
+    "budget": 18000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.018,
+        0.011
+      ],
+      [
+        0.025,
+        0.02,
+        0.0116
+      ],
+      [
+        0.025,
+        0.022,
+        0.0122
+      ],
+      [
+        0.025,
+        0.018,
+        0.011
+      ],
+      [
+        0.025,
+        0.02,
+        0.0116
+      ],
+      [
+        0.025,
+        0.022,
+        0.0122
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false,
+    "collision": {
+      "file": "models/collision/guti_pebble_variations_col.glb",
+      "shapes": 6,
+      "triangles": 384
+    },
+    "lods": []
+  },
+  {
+    "name": "guti_clay_shard",
+    "triangles": 616,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 256,
+    "bytes": 82200,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.02,
+        0.008
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false,
+    "collision": {
+      "file": "models/collision/guti_clay_shard_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": []
+  },
+  {
+    "name": "guti_tamarind_seed",
+    "triangles": 848,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 256,
+    "bytes": 84616,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.019,
+        0.015
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false,
+    "collision": {
+      "file": "models/collision/guti_tamarind_seed_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": []
+  },
+  {
+    "name": "prop_kolshi",
+    "triangles": 1280,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 327064,
+    "budget": 8000,
+    "dimensions_m": [
+      [
+        0.29,
+        0.290267,
+        0.35
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_kolshi_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_kolshi_lod1.glb",
+        "triangles": 640,
+        "bytes": 84040
+      },
+      {
+        "file": "models/lod/prop_kolshi_lod2.glb",
+        "triangles": 320,
+        "bytes": 23848
+      }
+    ]
+  },
+  {
+    "name": "prop_chula",
+    "triangles": 1172,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 329640,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        0.5,
+        0.32,
+        0.25
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_chula_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_chula_lod1.glb",
+        "triangles": 520,
+        "bytes": 84040
+      },
+      {
+        "file": "models/lod/prop_chula_lod2.glb",
+        "triangles": 320,
+        "bytes": 27688
+      }
+    ]
+  },
+  {
+    "name": "prop_piri",
+    "triangles": 60,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 393132,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.4,
+        0.25,
+        0.1
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_piri_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": []
+  },
+  {
+    "name": "prop_pati",
+    "triangles": 1704,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 372500,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        1.2,
+        0.9,
+        0.05
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_pati_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_pati_lod1.glb",
+        "triangles": 648,
+        "bytes": 109336
+      },
+      {
+        "file": "models/lod/prop_pati_lod2.glb",
+        "triangles": 48,
+        "bytes": 21000
+      }
+    ]
+  },
+  {
+    "name": "prop_lantern",
+    "triangles": 1888,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 379536,
+    "budget": 5000,
+    "dimensions_m": [
+      [
+        0.143995,
+        0.131275,
+        0.3
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_lantern_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_lantern_lod1.glb",
+        "triangles": 716,
+        "bytes": 110100
+      },
+      {
+        "file": "models/lod/prop_lantern_lod2.glb",
+        "triangles": 388,
+        "bytes": 35760
+      }
+    ]
+  },
+  {
+    "name": "prop_haystack",
+    "triangles": 3592,
+    "objects": 1,
+    "embedded_images": 4,
+    "texture_px": 1024,
+    "bytes": 2299676,
+    "budget": 8000,
+    "dimensions_m": [
+      [
+        2.307074,
+        2.321282,
+        2.5
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_haystack_col.glb",
+      "shapes": 4,
+      "triangles": 256
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_haystack_lod1.glb",
+        "triangles": 1796,
+        "bytes": 777252
+      },
+      {
+        "file": "models/lod/prop_haystack_lod2.glb",
+        "triangles": 900,
+        "bytes": 222052
+      }
+    ]
+  },
+  {
+    "name": "prop_fence",
+    "triangles": 2616,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 1024,
+    "bytes": 957456,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        2.0,
+        0.09,
+        1.5
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_fence_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_fence_lod1.glb",
+        "triangles": 1914,
+        "bytes": 348720
+      }
+    ]
+  },
+  {
+    "name": "prop_house",
+    "triangles": 964,
+    "objects": 1,
+    "embedded_images": 8,
+    "texture_px": 1024,
+    "bytes": 3961484,
+    "budget": 20000,
+    "dimensions_m": [
+      [
+        6.0,
+        4.0,
+        3.5
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_house_col.glb",
+      "shapes": 6,
+      "triangles": 228
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_house_lod1.glb",
+        "triangles": 412,
+        "bytes": 1284580
+      }
+    ]
+  },
+  {
+    "name": "prop_chouki",
+    "triangles": 216,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 1024,
+    "bytes": 1189376,
+    "budget": 5000,
+    "dimensions_m": [
+      [
+        1.8,
+        1.2,
+        0.45
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_chouki_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": []
+  },
+  {
+    "name": "prop_clothesline",
+    "triangles": 1830,
+    "objects": 1,
+    "embedded_images": 4,
+    "texture_px": 1024,
+    "bytes": 1949172,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        3.05523,
+        0.111228,
+        1.9
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_clothesline_col.glb",
+      "shapes": 2,
+      "triangles": 128
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_clothesline_lod1.glb",
+        "triangles": 586,
+        "bytes": 619724
+      },
+      {
+        "file": "models/lod/prop_clothesline_lod2.glb",
+        "triangles": 290,
+        "bytes": 170596
+      }
+    ]
+  },
+  {
+    "name": "prop_kula",
+    "triangles": 1152,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 311208,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        0.5,
+        0.5,
+        0.045
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_kula_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_kula_lod1.glb",
+        "triangles": 432,
+        "bytes": 87688
+      },
+      {
+        "file": "models/lod/prop_kula_lod2.glb",
+        "triangles": 216,
+        "bytes": 27220
+      }
+    ]
+  },
+  {
+    "name": "prop_dala",
+    "triangles": 1344,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 317516,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        0.45,
+        0.45,
+        0.21
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_dala_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_dala_lod1.glb",
+        "triangles": 528,
+        "bytes": 90924
+      },
+      {
+        "file": "models/lod/prop_dala_lod2.glb",
+        "triangles": 264,
+        "bytes": 28920
+      }
+    ]
+  },
+  {
+    "name": "prop_pots",
+    "triangles": 2688,
+    "objects": 3,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 363952,
+    "budget": 5000,
+    "dimensions_m": [
+      [
+        0.38,
+        0.38,
+        0.24
+      ],
+      [
+        0.21,
+        0.21,
+        0.22
+      ],
+      [
+        0.34,
+        0.34,
+        0.3
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_pots_col.glb",
+      "shapes": 3,
+      "triangles": 192
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_pots_lod1.glb",
+        "triangles": 1344,
+        "bytes": 104168
+      },
+      {
+        "file": "models/lod/prop_pots_lod2.glb",
+        "triangles": 672,
+        "bytes": 35596
+      }
+    ]
+  },
+  {
+    "name": "prop_jharu",
+    "triangles": 1152,
+    "objects": 1,
+    "embedded_images": 4,
+    "texture_px": 512,
+    "bytes": 776924,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        0.229654,
+        0.078723,
+        0.7
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_jharu_col.glb",
+      "shapes": 1,
+      "triangles": 12
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_jharu_lod1.glb",
+        "triangles": 468,
+        "bytes": 211008
+      },
+      {
+        "file": "models/lod/prop_jharu_lod2.glb",
+        "triangles": 288,
+        "bytes": 55232
+      }
+    ]
+  },
+  {
+    "name": "prop_chicken",
+    "triangles": 3780,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 512,
+    "bytes": 590636,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        0.152054,
+        0.309387,
+        0.35
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "joints": 6,
+    "animations": [
+      "idle",
+      "peck",
+      "walk"
+    ],
+    "collision": {
+      "file": "models/collision/prop_chicken_col.glb",
+      "shapes": 2,
+      "triangles": 24
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_chicken_lod1.glb",
+        "triangles": 1172,
+        "bytes": 182240
+      },
+      {
+        "file": "models/lod/prop_chicken_lod2.glb",
+        "triangles": 834,
+        "bytes": 87352
+      }
+    ]
+  },
+  {
+    "name": "prop_banana_tree",
+    "triangles": 1954,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 1024,
+    "bytes": 873016,
+    "budget": 10000,
+    "dimensions_m": [
+      [
+        2.41433,
+        2.386567,
+        3.0
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_banana_tree_col.glb",
+      "shapes": 1,
+      "triangles": 64
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_banana_tree_lod1.glb",
+        "triangles": 734,
+        "bytes": 278224
+      },
+      {
+        "file": "models/lod/prop_banana_tree_lod2.glb",
+        "triangles": 494,
+        "bytes": 83692
+      }
+    ]
+  },
+  {
+    "name": "prop_banyan_tree",
+    "triangles": 46218,
+    "objects": 1,
+    "embedded_images": 4,
+    "texture_px": 1024,
+    "bytes": 5176276,
+    "budget": 50000,
+    "dimensions_m": [
+      [
+        15.0,
+        14.0,
+        12.0
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": true,
+    "collision": {
+      "file": "models/collision/prop_banyan_tree_col.glb",
+      "shapes": 2,
+      "triangles": 128
+    },
+    "lods": [
+      {
+        "file": "models/lod/prop_banyan_tree_lod1.glb",
+        "triangles": 23454,
+        "bytes": 2277476
+      },
+      {
+        "file": "models/lod/prop_banyan_tree_lod2.glb",
+        "triangles": 12474,
+        "bytes": 1020940
+      }
+    ]
+  }
+]
