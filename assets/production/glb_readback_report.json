@@ -1,0 +1,156 @@
+[
+  {
+    "name": "guti_clay_shard",
+    "readback": "PASS",
+    "triangles": 616,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "guti_pebble_dark",
+    "readback": "PASS",
+    "triangles": 960,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "guti_pebble_light",
+    "readback": "PASS",
+    "triangles": 960,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "guti_pebble_variations",
+    "readback": "PASS",
+    "triangles": 4368,
+    "mesh_objects": 6,
+    "embedded_images": 1
+  },
+  {
+    "name": "guti_tamarind_seed",
+    "readback": "PASS",
+    "triangles": 848,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_banana_tree",
+    "readback": "PASS",
+    "triangles": 1954,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_banyan_tree",
+    "readback": "PASS",
+    "triangles": 46218,
+    "mesh_objects": 1,
+    "embedded_images": 2
+  },
+  {
+    "name": "prop_chicken",
+    "readback": "PASS",
+    "triangles": 3780,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_chouki",
+    "readback": "PASS",
+    "triangles": 216,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_chula",
+    "readback": "PASS",
+    "triangles": 1172,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_clothesline",
+    "readback": "PASS",
+    "triangles": 1830,
+    "mesh_objects": 1,
+    "embedded_images": 2
+  },
+  {
+    "name": "prop_dala",
+    "readback": "PASS",
+    "triangles": 1344,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_fence",
+    "readback": "PASS",
+    "triangles": 2616,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_haystack",
+    "readback": "PASS",
+    "triangles": 3592,
+    "mesh_objects": 1,
+    "embedded_images": 2
+  },
+  {
+    "name": "prop_house",
+    "readback": "PASS",
+    "triangles": 964,
+    "mesh_objects": 1,
+    "embedded_images": 4
+  },
+  {
+    "name": "prop_jharu",
+    "readback": "PASS",
+    "triangles": 1152,
+    "mesh_objects": 1,
+    "embedded_images": 2
+  },
+  {
+    "name": "prop_kolshi",
+    "readback": "PASS",
+    "triangles": 1280,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_kula",
+    "readback": "PASS",
+    "triangles": 1152,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_lantern",
+    "readback": "PASS",
+    "triangles": 1888,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_pati",
+    "readback": "PASS",
+    "triangles": 1704,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_piri",
+    "readback": "PASS",
+    "triangles": 60,
+    "mesh_objects": 1,
+    "embedded_images": 1
+  },
+  {
+    "name": "prop_pots",
+    "readback": "PASS",
+    "triangles": 2688,
+    "mesh_objects": 3,
+    "embedded_images": 1
+  }
+]

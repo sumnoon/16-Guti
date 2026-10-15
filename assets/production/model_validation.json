@@ -1,0 +1,389 @@
+[
+  {
+    "name": "guti_pebble_dark",
+    "triangles": 960,
+    "budget": 3000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3403960,
+    "dimensions_m": [
+      [
+        0.025,
+        0.021,
+        0.012
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "guti_pebble_light",
+    "triangles": 960,
+    "budget": 3000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3403960,
+    "dimensions_m": [
+      [
+        0.025,
+        0.021,
+        0.012
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "guti_pebble_variations",
+    "triangles": 4368,
+    "budget": 18000,
+    "objects": 6,
+    "embedded_textures": 1,
+    "bytes": 3515276,
+    "dimensions_m": [
+      [
+        0.025,
+        0.018,
+        0.011
+      ],
+      [
+        0.025,
+        0.02,
+        0.0116
+      ],
+      [
+        0.025,
+        0.022,
+        0.0122
+      ],
+      [
+        0.025,
+        0.018,
+        0.011
+      ],
+      [
+        0.025,
+        0.02,
+        0.0116
+      ],
+      [
+        0.025,
+        0.022,
+        0.0122
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "guti_clay_shard",
+    "triangles": 616,
+    "budget": 3000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3698192,
+    "dimensions_m": [
+      [
+        0.025,
+        0.02,
+        0.008
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "guti_tamarind_seed",
+    "triangles": 848,
+    "budget": 2000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3706736,
+    "dimensions_m": [
+      [
+        0.025,
+        0.019,
+        0.015
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_kolshi",
+    "triangles": 1280,
+    "budget": 8000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3717716,
+    "dimensions_m": [
+      [
+        0.29,
+        0.290267,
+        0.35
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_chula",
+    "triangles": 1172,
+    "budget": 6000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3718764,
+    "dimensions_m": [
+      [
+        0.5,
+        0.32,
+        0.25
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_piri",
+    "triangles": 60,
+    "budget": 3000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 4118400,
+    "dimensions_m": [
+      [
+        0.4,
+        0.25,
+        0.1
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_pati",
+    "triangles": 1704,
+    "budget": 2000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3602780,
+    "dimensions_m": [
+      [
+        1.2,
+        0.9,
+        0.05
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_lantern",
+    "triangles": 1888,
+    "budget": 5000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3468456,
+    "dimensions_m": [
+      [
+        0.143995,
+        0.131275,
+        0.3
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_haystack",
+    "triangles": 3592,
+    "budget": 8000,
+    "objects": 1,
+    "embedded_textures": 2,
+    "bytes": 8005584,
+    "dimensions_m": [
+      [
+        2.307074,
+        2.321282,
+        2.5
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_fence",
+    "triangles": 2616,
+    "budget": 4000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3254672,
+    "dimensions_m": [
+      [
+        2.0,
+        0.09,
+        1.5
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_house",
+    "triangles": 964,
+    "budget": 20000,
+    "objects": 1,
+    "embedded_textures": 4,
+    "bytes": 14413288,
+    "dimensions_m": [
+      [
+        6.0,
+        4.0,
+        3.5
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_chouki",
+    "triangles": 216,
+    "budget": 5000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 4130284,
+    "dimensions_m": [
+      [
+        1.8,
+        1.2,
+        0.45
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_clothesline",
+    "triangles": 1830,
+    "budget": 4000,
+    "objects": 1,
+    "embedded_textures": 2,
+    "bytes": 6837636,
+    "dimensions_m": [
+      [
+        3.05523,
+        0.111228,
+        1.9
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_kula",
+    "triangles": 1152,
+    "budget": 4000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3205660,
+    "dimensions_m": [
+      [
+        0.5,
+        0.5,
+        0.045
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_dala",
+    "triangles": 1344,
+    "budget": 4000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3211176,
+    "dimensions_m": [
+      [
+        0.45,
+        0.45,
+        0.21
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_pots",
+    "triangles": 2688,
+    "budget": 5000,
+    "objects": 3,
+    "embedded_textures": 1,
+    "bytes": 3763228,
+    "dimensions_m": [
+      [
+        0.38,
+        0.38,
+        0.24
+      ],
+      [
+        0.21,
+        0.21,
+        0.22
+      ],
+      [
+        0.34,
+        0.34,
+        0.3
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_jharu",
+    "triangles": 1152,
+    "budget": 2000,
+    "objects": 1,
+    "embedded_textures": 2,
+    "bytes": 8287600,
+    "dimensions_m": [
+      [
+        0.239515,
+        0.077195,
+        0.7
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_chicken",
+    "triangles": 3780,
+    "budget": 6000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 4249824,
+    "dimensions_m": [
+      [
+        0.152054,
+        0.309387,
+        0.35
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_banana_tree",
+    "triangles": 1954,
+    "budget": 10000,
+    "objects": 1,
+    "embedded_textures": 1,
+    "bytes": 3442984,
+    "dimensions_m": [
+      [
+        2.41433,
+        2.386567,
+        3.0
+      ]
+    ],
+    "bottom_center_origins": true
+  },
+  {
+    "name": "prop_banyan_tree",
+    "triangles": 46218,
+    "budget": 50000,
+    "objects": 1,
+    "embedded_textures": 2,
+    "bytes": 10063416,
+    "dimensions_m": [
+      [
+        15.0,
+        14.0,
+        12.0
+      ]
+    ],
+    "bottom_center_origins": true
+  }
+]
