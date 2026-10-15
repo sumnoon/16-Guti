@@ -1,0 +1,215 @@
+[
+  {
+    "name": "support_stone",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 7.08,
+    "interior_neighbor_error": 7.56,
+    "vertical_wrap_error": 8.62
+  },
+  {
+    "name": "support_stone_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 2.45,
+    "interior_neighbor_error": 2.55,
+    "vertical_wrap_error": 2.73
+  },
+  {
+    "name": "uthan_tex_bark_banyan",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 15.35,
+    "interior_neighbor_error": 16.74,
+    "vertical_wrap_error": 13.13
+  },
+  {
+    "name": "uthan_tex_bark_banyan_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 7.0,
+    "interior_neighbor_error": 7.08,
+    "vertical_wrap_error": 5.05
+  },
+  {
+    "name": "uthan_tex_fence_bamboo",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 17.48,
+    "interior_neighbor_error": 9.36,
+    "vertical_wrap_error": 9.29
+  },
+  {
+    "name": "uthan_tex_fence_bamboo_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 6.03,
+    "interior_neighbor_error": 3.61,
+    "vertical_wrap_error": 2.99
+  },
+  {
+    "name": "uthan_tex_ground_mud",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 8.9,
+    "interior_neighbor_error": 10.21,
+    "vertical_wrap_error": 13.86
+  },
+  {
+    "name": "uthan_tex_ground_mud_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 2.86,
+    "interior_neighbor_error": 3.06,
+    "vertical_wrap_error": 3.49
+  },
+  {
+    "name": "uthan_tex_ground_rough",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 19.91,
+    "interior_neighbor_error": 18.75,
+    "vertical_wrap_error": 23.99
+  },
+  {
+    "name": "uthan_tex_ground_rough_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 7.79,
+    "interior_neighbor_error": 7.56,
+    "vertical_wrap_error": 8.27
+  },
+  {
+    "name": "uthan_tex_mat_jute",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 9.47,
+    "interior_neighbor_error": 9.44,
+    "vertical_wrap_error": 12.01
+  },
+  {
+    "name": "uthan_tex_mat_jute_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 2.57,
+    "interior_neighbor_error": 2.9,
+    "vertical_wrap_error": 3.7
+  },
+  {
+    "name": "uthan_tex_roof_tin",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 11.17,
+    "interior_neighbor_error": 8.56,
+    "vertical_wrap_error": 7.6
+  },
+  {
+    "name": "uthan_tex_roof_tin_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 6.21,
+    "interior_neighbor_error": 4.46,
+    "vertical_wrap_error": 3.48
+  },
+  {
+    "name": "uthan_tex_straw",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 21.95,
+    "interior_neighbor_error": 22.51,
+    "vertical_wrap_error": 25.23
+  },
+  {
+    "name": "uthan_tex_straw_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 6.65,
+    "interior_neighbor_error": 6.06,
+    "vertical_wrap_error": 5.79
+  },
+  {
+    "name": "uthan_tex_wall_mud",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 7.2,
+    "interior_neighbor_error": 8.45,
+    "vertical_wrap_error": 11.3
+  },
+  {
+    "name": "uthan_tex_wall_mud_normal",
+    "size": [
+      1024,
+      1024
+    ],
+    "horizontal_wrap_error": 3.22,
+    "interior_neighbor_error": 3.6,
+    "vertical_wrap_error": 4.12
+  },
+  {
+    "name": "uthan_pano_afternoon",
+    "size": [
+      2048,
+      1024
+    ],
+    "horizontal_wrap_error": 4.53,
+    "interior_neighbor_error": 3.52,
+    "top_row_std": 0.0,
+    "bottom_row_std": 0.0
+  },
+  {
+    "name": "uthan_pano_night",
+    "size": [
+      2048,
+      1024
+    ],
+    "horizontal_wrap_error": 2.44,
+    "interior_neighbor_error": 2.26,
+    "top_row_std": 0.0,
+    "bottom_row_std": 0.0
+  },
+  {
+    "name": "uthan_pano_sunset",
+    "size": [
+      2048,
+      1024
+    ],
+    "horizontal_wrap_error": 3.2,
+    "interior_neighbor_error": 2.62,
+    "top_row_std": 0.0,
+    "bottom_row_std": 0.0
+  }
+]

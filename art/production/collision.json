@@ -1,0 +1,696 @@
+{
+  "space": "glTF Y-up metres, relative to each object origin",
+  "shapes": {
+    "guti_pebble_dark": [
+      {
+        "object": "guti_pebble_dark",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.006,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.012,
+          0.021
+        ],
+        "radius": 0.0125,
+        "height": 0.012,
+        "axis": "Y"
+      }
+    ],
+    "guti_pebble_light": [
+      {
+        "object": "guti_pebble_light",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.006,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.012,
+          0.021
+        ],
+        "radius": 0.0125,
+        "height": 0.012,
+        "axis": "Y"
+      }
+    ],
+    "guti_pebble_variations": [
+      {
+        "object": "dark_variation_1",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0055,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.011,
+          0.018
+        ],
+        "radius": 0.0125,
+        "height": 0.011,
+        "axis": "Y"
+      },
+      {
+        "object": "dark_variation_2",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0058,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.0116,
+          0.02
+        ],
+        "radius": 0.0125,
+        "height": 0.0116,
+        "axis": "Y"
+      },
+      {
+        "object": "dark_variation_3",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0061,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.0122,
+          0.022
+        ],
+        "radius": 0.0125,
+        "height": 0.0122,
+        "axis": "Y"
+      },
+      {
+        "object": "cream_variation_1",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0055,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.011,
+          0.018
+        ],
+        "radius": 0.0125,
+        "height": 0.011,
+        "axis": "Y"
+      },
+      {
+        "object": "cream_variation_2",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0058,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.0116,
+          0.02
+        ],
+        "radius": 0.0125,
+        "height": 0.0116,
+        "axis": "Y"
+      },
+      {
+        "object": "cream_variation_3",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0061,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.0122,
+          0.022
+        ],
+        "radius": 0.0125,
+        "height": 0.0122,
+        "axis": "Y"
+      }
+    ],
+    "guti_clay_shard": [
+      {
+        "object": "guti_clay_shard",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.004,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.008,
+          0.02
+        ],
+        "radius": 0.0125,
+        "height": 0.008,
+        "axis": "Y"
+      }
+    ],
+    "guti_tamarind_seed": [
+      {
+        "object": "guti_tamarind_seed",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0075,
+          -0.0
+        ],
+        "size": [
+          0.025,
+          0.015,
+          0.019
+        ],
+        "radius": 0.0125,
+        "height": 0.015,
+        "axis": "Y"
+      }
+    ],
+    "prop_kolshi": [
+      {
+        "object": "prop_kolshi",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.175,
+          -0.0
+        ],
+        "size": [
+          0.29,
+          0.35,
+          0.2903
+        ],
+        "radius": 0.1451,
+        "height": 0.35,
+        "axis": "Y"
+      }
+    ],
+    "prop_chula": [
+      {
+        "object": "prop_chula",
+        "type": "box",
+        "center": [
+          0.0,
+          0.125,
+          -0.0
+        ],
+        "size": [
+          0.5,
+          0.25,
+          0.32
+        ]
+      }
+    ],
+    "prop_piri": [
+      {
+        "object": "prop_piri",
+        "type": "box",
+        "center": [
+          0.0,
+          0.05,
+          -0.0
+        ],
+        "size": [
+          0.4,
+          0.1,
+          0.25
+        ]
+      }
+    ],
+    "prop_pati": [
+      {
+        "object": "prop_pati",
+        "type": "box",
+        "center": [
+          0.0,
+          0.025,
+          -0.0
+        ],
+        "size": [
+          1.2,
+          0.05,
+          0.9
+        ]
+      }
+    ],
+    "prop_lantern": [
+      {
+        "object": "prop_lantern",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.1144,
+          -0.0
+        ],
+        "size": [
+          0.1313,
+          0.2287,
+          0.1313
+        ],
+        "radius": 0.0656,
+        "height": 0.2287,
+        "axis": "Y"
+      }
+    ],
+    "prop_haystack": [
+      {
+        "object": "prop_haystack",
+        "type": "cylinder",
+        "center": [
+          0.0075,
+          0.5512,
+          0.0001
+        ],
+        "size": [
+          2.2386,
+          1.0993,
+          2.2386
+        ],
+        "radius": 1.1193,
+        "height": 1.0993,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_haystack",
+        "type": "cylinder",
+        "center": [
+          0.0075,
+          1.4007,
+          0.0001
+        ],
+        "size": [
+          1.599,
+          0.5996,
+          1.599
+        ],
+        "radius": 0.7995,
+        "height": 0.5996,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_haystack",
+        "type": "cylinder",
+        "center": [
+          0.0075,
+          1.9503,
+          0.0001
+        ],
+        "size": [
+          0.8994,
+          0.4997,
+          0.8994
+        ],
+        "radius": 0.4497,
+        "height": 0.4997,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_haystack",
+        "type": "cylinder",
+        "center": [
+          0.0075,
+          2.3501,
+          0.0001
+        ],
+        "size": [
+          0.07,
+          0.2998,
+          0.07
+        ],
+        "radius": 0.035,
+        "height": 0.2998,
+        "axis": "Y"
+      }
+    ],
+    "prop_fence": [
+      {
+        "object": "prop_fence",
+        "type": "box",
+        "center": [
+          0.0,
+          0.75,
+          -0.0
+        ],
+        "size": [
+          2.0,
+          1.5,
+          0.09
+        ]
+      }
+    ],
+    "prop_house": [
+      {
+        "object": "prop_house",
+        "type": "box",
+        "center": [
+          0.0,
+          0.1196,
+          -0.0779
+        ],
+        "size": [
+          5.7,
+          0.2392,
+          3.8442
+        ]
+      },
+      {
+        "object": "prop_house",
+        "type": "box",
+        "center": [
+          0.0,
+          1.4251,
+          -0.2753
+        ],
+        "size": [
+          5.54,
+          2.3918,
+          2.7636
+        ]
+      },
+      {
+        "object": "prop_house",
+        "type": "box",
+        "center": [
+          0.0,
+          3.0396,
+          -0.2857
+        ],
+        "size": [
+          5.9,
+          0.8969,
+          3.4286
+        ]
+      },
+      {
+        "object": "prop_house",
+        "type": "cylinder",
+        "center": [
+          -2.55,
+          1.2557,
+          1.7091
+        ],
+        "size": [
+          0.11,
+          2.033,
+          0.1143
+        ],
+        "radius": 0.0571,
+        "height": 2.033,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_house",
+        "type": "cylinder",
+        "center": [
+          -0.3,
+          1.2557,
+          1.7091
+        ],
+        "size": [
+          0.11,
+          2.033,
+          0.1143
+        ],
+        "radius": 0.0571,
+        "height": 2.033,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_house",
+        "type": "cylinder",
+        "center": [
+          2.55,
+          1.2557,
+          1.7091
+        ],
+        "size": [
+          0.11,
+          2.033,
+          0.1143
+        ],
+        "radius": 0.0571,
+        "height": 2.033,
+        "axis": "Y"
+      }
+    ],
+    "prop_chouki": [
+      {
+        "object": "prop_chouki",
+        "type": "box",
+        "center": [
+          0.0,
+          0.225,
+          -0.0
+        ],
+        "size": [
+          1.8,
+          0.45,
+          1.2
+        ]
+      }
+    ],
+    "prop_clothesline": [
+      {
+        "object": "prop_clothesline",
+        "type": "cylinder",
+        "center": [
+          -1.4998,
+          0.95,
+          -0.0002
+        ],
+        "size": [
+          0.05,
+          1.8998,
+          0.05
+        ],
+        "radius": 0.025,
+        "height": 1.8998,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_clothesline",
+        "type": "cylinder",
+        "center": [
+          1.4998,
+          0.95,
+          -0.0002
+        ],
+        "size": [
+          0.05,
+          1.8998,
+          0.05
+        ],
+        "radius": 0.025,
+        "height": 1.8998,
+        "axis": "Y"
+      }
+    ],
+    "prop_kula": [
+      {
+        "object": "prop_kula",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.0225,
+          -0.0
+        ],
+        "size": [
+          0.5,
+          0.045,
+          0.5
+        ],
+        "radius": 0.25,
+        "height": 0.045,
+        "axis": "Y"
+      }
+    ],
+    "prop_dala": [
+      {
+        "object": "prop_dala",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.105,
+          -0.0
+        ],
+        "size": [
+          0.45,
+          0.21,
+          0.45
+        ],
+        "radius": 0.225,
+        "height": 0.21,
+        "axis": "Y"
+      }
+    ],
+    "prop_pots": [
+      {
+        "object": "aluminium_handi",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.12,
+          -0.0
+        ],
+        "size": [
+          0.38,
+          0.24,
+          0.38
+        ],
+        "radius": 0.19,
+        "height": 0.24,
+        "axis": "Y"
+      },
+      {
+        "object": "brass_lota",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.11,
+          -0.0
+        ],
+        "size": [
+          0.21,
+          0.22,
+          0.21
+        ],
+        "radius": 0.105,
+        "height": 0.22,
+        "axis": "Y"
+      },
+      {
+        "object": "clay_rice_pot",
+        "type": "cylinder",
+        "center": [
+          0.0,
+          0.15,
+          -0.0
+        ],
+        "size": [
+          0.34,
+          0.3,
+          0.34
+        ],
+        "radius": 0.17,
+        "height": 0.3,
+        "axis": "Y"
+      }
+    ],
+    "prop_jharu": [
+      {
+        "object": "prop_jharu",
+        "type": "box",
+        "center": [
+          0.0,
+          0.35,
+          -0.0
+        ],
+        "size": [
+          0.2297,
+          0.7,
+          0.0787
+        ]
+      }
+    ],
+    "prop_chicken": [
+      {
+        "object": "prop_chicken",
+        "type": "box",
+        "center": [
+          0.0,
+          0.2159,
+          0.0311
+        ],
+        "size": [
+          0.1584,
+          0.2217,
+          0.2534
+        ]
+      },
+      {
+        "object": "prop_chicken",
+        "type": "box",
+        "center": [
+          0.0,
+          0.0575,
+          0.0206
+        ],
+        "size": [
+          0.095,
+          0.1267,
+          0.0845
+        ]
+      }
+    ],
+    "prop_banana_tree": [
+      {
+        "object": "prop_banana_tree",
+        "type": "cylinder",
+        "center": [
+          -0.0093,
+          0.9773,
+          -0.0185
+        ],
+        "size": [
+          0.2918,
+          1.9451,
+          0.2918
+        ],
+        "radius": 0.1459,
+        "height": 1.9451,
+        "axis": "Y"
+      }
+    ],
+    "prop_banyan_tree": [
+      {
+        "object": "prop_banyan_tree",
+        "type": "cylinder",
+        "center": [
+          -0.2522,
+          3.2635,
+          0.1206
+        ],
+        "size": [
+          1.8064,
+          6.4204,
+          1.6452
+        ],
+        "radius": 0.9032,
+        "height": 6.4204,
+        "axis": "Y"
+      },
+      {
+        "object": "prop_banyan_tree",
+        "type": "cylinder",
+        "center": [
+          -0.2522,
+          0.3452,
+          0.1206
+        ],
+        "size": [
+          3.6128,
+          0.5837,
+          3.2903
+        ],
+        "radius": 1.8064,
+        "height": 0.5837,
+        "axis": "Y"
+      }
+    ]
+  }
+}

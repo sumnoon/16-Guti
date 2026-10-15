@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Village Uthan Viewer</title>
+<style>
+:root{--bg:#f2ede3;--panel:#fffaf0;--ink:#352b22;--muted:#6e6050;--line:#d6c8b5;--accent:#79402c}
+@media (prefers-color-scheme:dark){:root{--bg:#1d1915;--panel:#2a241e;--ink:#eee4d6;--muted:#b3a490;--line:#4a3f33;--accent:#e0a17f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px system-ui,sans-serif;height:100vh;display:grid;grid-template-columns:280px 1fr}
+aside{padding:16px;border-right:1px solid var(--line);background:var(--panel);overflow:auto}
+h1{font:24px Georgia,serif;margin:0 0 4px}
+p{color:var(--muted);margin:0 0 14px;line-height:1.45}
+label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+select,button{width:100%;padding:7px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:flex;gap:8px;align-items:center;margin-top:8px}.row input{margin:0}.row span{font-size:13px}
+#stats{margin-top:16px;font:12px ui-monospace,monospace;white-space:pre-wrap;color:var(--muted)}
+#view{position:relative;min-width:0}canvas{display:block;width:100%;height:100%}
+#err{position:absolute;left:12px;bottom:12px;color:#b3261e;font-weight:600}
+@media (max-width:700px){body{grid-template-columns:1fr;grid-template-rows:auto 60vh}aside{border-right:0;border-bottom:1px solid var(--line)}}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<aside>
+  <h1>Village Uthan</h1>
+  <p>Engine check for the GLBs, LODs, colliders, panoramas and tiling textures. Serve this folder over HTTP to use it.</p>
+  <label for="mode">View</label>
+  <select id="mode"><option value="model">Model</option><option value="texture">Texture tiling (3 × 3)</option></select>
+  <div id="modelControls">
+    <label for="asset">Asset</label><select id="asset"></select>
+    <label for="lod">Level of detail</label><select id="lod"></select>
+    <label for="anim">Animation</label><select id="anim"></select>
+    <div class="row"><input type="checkbox" id="col"><span>Show colliders</span></div>
+    <div class="row"><input type="checkbox" id="ao" checked><span>Baked AO (vertex colour)</span></div>
+  </div>
+  <div id="texControls" hidden>
+    <label for="tex">Texture</label><select id="tex"></select>
+    <div class="row"><input type="checkbox" id="nrm" checked><span>Normal map</span></div>
+  </div>
+  <label for="pano">Panorama (background + lighting)</label>
+  <select id="pano"><option>afternoon</option><option>sunset</option><option>night</option></select>
+  <div id="stats"></div>
+</aside>
+<div id="view"><div id="err"></div></div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+
+const $=id=>document.getElementById(id);
+const view=$('view'),renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.shadowMap.enabled=true;
+view.prepend(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(45,1,.001,500),controls=new OrbitControls(camera,renderer.domElement);
+const sun=new THREE.DirectionalLight(0xfff0d8,1.6);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);scene.add(sun,sun.target);
+const loader=new GLTFLoader(),texLoader=new THREE.TextureLoader(),pmrem=new THREE.PMREMGenerator(renderer),clock=new THREE.Clock();
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshStandardMaterial({roughness:.95}));ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
+const report=await (await fetch('production/model_validation.json')).json();
+const textures=['uthan_tex_ground_mud','uthan_tex_ground_rough','uthan_tex_wall_mud','uthan_tex_roof_tin','uthan_tex_fence_bamboo','uthan_tex_mat_jute','uthan_tex_bark_banyan','uthan_tex_straw','support_stone'];
+for(const r of report)$('asset').add(new Option(r.name,r.name));
+for(const t of textures)$('tex').add(new Option(t,t));
+let current=null,colliders=null,mixer=null;window.viewerState={loaded:0,errors:[]};
+
+function tex(name,srgb){const t=texLoader.load(`textures/${name}.png`);t.wrapS=t.wrapT=THREE.RepeatWrapping;if(srgb)t.colorSpace=THREE.SRGBColorSpace;return t}
+const groundMap=tex('uthan_tex_ground_mud',true),groundNormal=tex('uthan_tex_ground_mud_normal');ground.material.map=groundMap;ground.material.normalMap=groundNormal;
+
+function setPano(){texLoader.load(`panoramas/uthan_pano_${$('pano').value}.png`,t=>{t.mapping=THREE.EquirectangularReflectionMapping;t.colorSpace=THREE.SRGBColorSpace;scene.background=t;scene.environment=pmrem.fromEquirectangular(t).texture;
+  const night=$('pano').value==='night';sun.intensity=night?.25:1.6;sun.color.set(night?0x9fb4ff:0xfff0d8);})}
+function clear(){for(const o of [current,colliders])if(o)scene.remove(o);current=colliders=mixer=null}
+function frame(size,center){
+  const r=Math.max(size.x,size.y,size.z);camera.position.set(center.x+r*1.1,center.y+r*.75,center.z+r*1.5);controls.target.copy(center);camera.near=r/200;camera.far=r*400;camera.updateProjectionMatrix();
+  sun.position.set(center.x-r*2,r*3,center.z+r*1.5);sun.target.position.copy(center);const c=sun.shadow.camera;c.left=c.bottom=-r*1.5;c.right=c.top=r*1.5;c.far=r*10;c.updateProjectionMatrix();
+  ground.scale.set(r*4,r*4,1);for(const t of [groundMap,groundNormal])t.repeat.set(r*4/2,r*4/2);ground.visible=true}
+function spread(root){ // multi-object sets share an origin; lay them out side by side for review
+  const kids=root.children.filter(c=>c.isMesh||c.isSkinnedMesh);if(kids.length<2)return;let x=0;
+  for(const k of kids){const b=new THREE.Box3().setFromObject(k),w=b.max.x-b.min.x;k.position.x=x+w/2;x+=w*1.25}
+  root.position.x=-x/2+.0001}
+async function load(file){
+  return new Promise((ok,fail)=>loader.load(file,ok,undefined,fail))}
+async function showModel(){
+  const r=report.find(x=>x.name===$('asset').value);const lod=$('lod').value;clear();$('err').textContent='';
+  const file=lod==='0'?`models/${r.name}.glb`:r.lods[+lod-1].file;
+  try{
+    const g=await load(file);current=g.scene;
+    current.traverse(o=>{if(o.isMesh){o.castShadow=o.receiveShadow=true;o.material.vertexColors=$('ao').checked&&!!o.geometry.attributes.color;o.material.needsUpdate=true}});
+    spread(current);scene.add(current);
+    if(g.animations.length){mixer=new THREE.AnimationMixer(current);const clip=g.animations.find(a=>a.name===$('anim').value)||g.animations[0];mixer.clipAction(clip).play()}
+    const c=await load(r.collision.file);colliders=c.scene;colliders.visible=$('col').checked;
+    const offsets=Object.fromEntries(current.children.map(k=>[k.name,k.position.x]));colliders.position.copy(current.position);
+    for(const k of colliders.children)k.position.x=offsets[k.name.replace(/_col_\d+$/,'')]||0;   // colliders follow their object
+    colliders.traverse(o=>{if(o.isMesh)o.material=new THREE.MeshBasicMaterial({color:0x33dd66,wireframe:true})});scene.add(colliders);
+    current.updateMatrixWorld(true);current.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.update()});
+    const box=new THREE.Box3().setFromObject(current);frame(box.getSize(new THREE.Vector3()),box.getCenter(new THREE.Vector3()));
+    let tris=0;current.traverse(o=>{if(o.isMesh)tris+=o.geometry.index.count/3});
+    $('stats').textContent=`${file}\n${tris.toLocaleString()} triangles\nsize ${box.getSize(new THREE.Vector3()).toArray().map(v=>v.toFixed(3)).join(' × ')} m\nanimations: ${g.animations.map(a=>a.name).join(', ')||'none'}`;
+    window.viewerState.loaded++;window.viewerState.last=file;
+  }catch(e){$('err').textContent=`Failed: ${file} — ${e.message||e}`;window.viewerState.errors.push(file)}
+}
+function showTexture(){
+  clear();const n=$('tex').value,m=new THREE.MeshStandardMaterial({map:tex(n,true),normalMap:$('nrm').checked?tex(n+'_normal'):null,roughness:.9});
+  for(const t of [m.map,m.normalMap])if(t)t.repeat.set(3,3);
+  current=new THREE.Mesh(new THREE.PlaneGeometry(3,3),m);current.rotation.x=-Math.PI/2;current.receiveShadow=true;scene.add(current);ground.visible=false;
+  frame(new THREE.Vector3(1.6,.6,1.6),new THREE.Vector3(0,0,0));camera.position.set(0,2.6,1.2);
+  $('stats').textContent=`textures/${n}.png repeated 3 × 3\n(seams would show at the thirds)`}
+function fillAsset(){
+  const r=report.find(x=>x.name===$('asset').value);$('lod').innerHTML='';$('lod').add(new Option(`LOD0 · ${r.triangles.toLocaleString()} tris`,'0'));
+  r.lods.forEach((l,i)=>$('lod').add(new Option(`LOD${i+1} · ${l.triangles.toLocaleString()} tris`,String(i+1))));
+  $('anim').innerHTML='';for(const a of r.animations||['none'])$('anim').add(new Option(a,a));$('anim').disabled=!r.animations}
+function refresh(){const m=$('mode').value==='model';$('modelControls').hidden=!m;$('texControls').hidden=m;m?showModel():showTexture()}
+$('asset').onchange=()=>{fillAsset();refresh()};for(const id of ['lod','anim','ao','mode','tex','nrm'])$(id).onchange=refresh;
+$('col').onchange=()=>{if(colliders)colliders.visible=$('col').checked};$('pano').onchange=setPano;
+const params=new URLSearchParams(location.search);if(params.get('asset'))$('asset').value=params.get('asset');
+function resize(){const w=view.clientWidth,h=view.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix()}
+addEventListener('resize',resize);resize();setPano();fillAsset();refresh();
+window.viewer={showModel,showTexture,fillAsset,report,$};
+renderer.setAnimationLoop(()=>{const dt=clock.getDelta();if(mixer)mixer.update(dt);controls.update();renderer.render(scene,camera)});
+</script>
+</body>
+</html>

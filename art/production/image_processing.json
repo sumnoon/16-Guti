@@ -1,0 +1,291 @@
+{
+  "textures": [
+    {
+      "name": "support_stone",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        78,
+        147
+      ],
+      "source": {
+        "horizontal_wrap_error": 10.38,
+        "vertical_wrap_error": 11.0,
+        "interior_neighbor_error": 7.26
+      },
+      "result": {
+        "horizontal_wrap_error": 7.08,
+        "vertical_wrap_error": 8.62,
+        "interior_neighbor_error": 7.56
+      },
+      "normal_map": "textures/support_stone_normal.png"
+    },
+    {
+      "name": "uthan_tex_bark_banyan",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        78,
+        100
+      ],
+      "source": {
+        "horizontal_wrap_error": 17.62,
+        "vertical_wrap_error": 18.8,
+        "interior_neighbor_error": 15.72
+      },
+      "result": {
+        "horizontal_wrap_error": 15.35,
+        "vertical_wrap_error": 13.13,
+        "interior_neighbor_error": 16.74
+      },
+      "normal_map": "textures/uthan_tex_bark_banyan_normal.png"
+    },
+    {
+      "name": "uthan_tex_fence_bamboo",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        80,
+        86
+      ],
+      "source": {
+        "horizontal_wrap_error": 10.7,
+        "vertical_wrap_error": 21.92,
+        "interior_neighbor_error": 9.37
+      },
+      "result": {
+        "horizontal_wrap_error": 17.48,
+        "vertical_wrap_error": 9.29,
+        "interior_neighbor_error": 9.36
+      },
+      "normal_map": "textures/uthan_tex_fence_bamboo_normal.png"
+    },
+    {
+      "name": "uthan_tex_ground_mud",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        241,
+        98
+      ],
+      "source": {
+        "horizontal_wrap_error": 13.3,
+        "vertical_wrap_error": 13.93,
+        "interior_neighbor_error": 10.73
+      },
+      "result": {
+        "horizontal_wrap_error": 8.9,
+        "vertical_wrap_error": 13.86,
+        "interior_neighbor_error": 10.21
+      },
+      "normal_map": "textures/uthan_tex_ground_mud_normal.png"
+    },
+    {
+      "name": "uthan_tex_ground_rough",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        235,
+        207
+      ],
+      "source": {
+        "horizontal_wrap_error": 24.17,
+        "vertical_wrap_error": 26.3,
+        "interior_neighbor_error": 19.28
+      },
+      "result": {
+        "horizontal_wrap_error": 19.91,
+        "vertical_wrap_error": 23.99,
+        "interior_neighbor_error": 18.75
+      },
+      "normal_map": "textures/uthan_tex_ground_rough_normal.png"
+    },
+    {
+      "name": "uthan_tex_mat_jute",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        99,
+        213
+      ],
+      "source": {
+        "horizontal_wrap_error": 24.99,
+        "vertical_wrap_error": 20.86,
+        "interior_neighbor_error": 9.12
+      },
+      "result": {
+        "horizontal_wrap_error": 9.47,
+        "vertical_wrap_error": 12.01,
+        "interior_neighbor_error": 9.44
+      },
+      "normal_map": "textures/uthan_tex_mat_jute_normal.png"
+    },
+    {
+      "name": "uthan_tex_roof_tin",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        244,
+        78
+      ],
+      "source": {
+        "horizontal_wrap_error": 26.25,
+        "vertical_wrap_error": 13.05,
+        "interior_neighbor_error": 8.95
+      },
+      "result": {
+        "horizontal_wrap_error": 11.17,
+        "vertical_wrap_error": 7.6,
+        "interior_neighbor_error": 8.56
+      },
+      "normal_map": "textures/uthan_tex_roof_tin_normal.png"
+    },
+    {
+      "name": "uthan_tex_straw",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        92,
+        85
+      ],
+      "source": {
+        "horizontal_wrap_error": 33.13,
+        "vertical_wrap_error": 31.07,
+        "interior_neighbor_error": 21.15
+      },
+      "result": {
+        "horizontal_wrap_error": 21.95,
+        "vertical_wrap_error": 25.23,
+        "interior_neighbor_error": 22.51
+      },
+      "normal_map": "textures/uthan_tex_straw_normal.png"
+    },
+    {
+      "name": "uthan_tex_wall_mud",
+      "size": [
+        1024,
+        1024
+      ],
+      "source_size": [
+        1254,
+        1254
+      ],
+      "overlap_px": [
+        78,
+        80
+      ],
+      "source": {
+        "horizontal_wrap_error": 11.38,
+        "vertical_wrap_error": 10.39,
+        "interior_neighbor_error": 8.29
+      },
+      "result": {
+        "horizontal_wrap_error": 7.2,
+        "vertical_wrap_error": 11.3,
+        "interior_neighbor_error": 8.45
+      },
+      "normal_map": "textures/uthan_tex_wall_mud_normal.png"
+    }
+  ],
+  "panoramas": [
+    {
+      "name": "uthan_pano_afternoon",
+      "size": [
+        2048,
+        1024
+      ],
+      "source_size": [
+        1774,
+        887
+      ],
+      "overlap_px": 48,
+      "horizontal_wrap_error": 4.53,
+      "source_horizontal_wrap_error": 10.23,
+      "top_row_std": 0.0,
+      "bottom_row_std": 0.0,
+      "interior_neighbor_error": 3.52
+    },
+    {
+      "name": "uthan_pano_night",
+      "size": [
+        2048,
+        1024
+      ],
+      "source_size": [
+        1774,
+        887
+      ],
+      "overlap_px": 50,
+      "horizontal_wrap_error": 2.44,
+      "source_horizontal_wrap_error": 9.86,
+      "top_row_std": 0.0,
+      "bottom_row_std": 0.0,
+      "interior_neighbor_error": 2.26
+    },
+    {
+      "name": "uthan_pano_sunset",
+      "size": [
+        2048,
+        1024
+      ],
+      "source_size": [
+        1774,
+        887
+      ],
+      "overlap_px": 49,
+      "horizontal_wrap_error": 3.2,
+      "source_horizontal_wrap_error": 13.73,
+      "top_row_std": 0.0,
+      "bottom_row_std": 0.0,
+      "interior_neighbor_error": 2.62
+    }
+  ]
+}

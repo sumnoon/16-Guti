@@ -1,0 +1,17 @@
+{
+  "name": "sholo-guti-tools",
+  "private": true,
+  "type": "module",
+  "description": "Asset pipeline and tests for the Sholo Guti game",
+  "scripts": {
+    "assets": "python prepare_assets.py",
+    "test": "node test_rules.mjs"
+  },
+  "dependencies": {
+    "@gltf-transform/cli": "4.1.1",
+    "@gltf-transform/core": "4.1.1",
+    "@gltf-transform/extensions": "4.1.1",
+    "@gltf-transform/functions": "4.1.1",
+    "sharp": "0.33.5"
+  }
+}

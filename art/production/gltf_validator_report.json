@@ -1,0 +1,506 @@
+[
+ {
+  "file": "collision/guti_clay_shard_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/guti_pebble_dark_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/guti_pebble_light_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/guti_pebble_variations_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 6,
+  "messages": []
+ },
+ {
+  "file": "collision/guti_tamarind_seed_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_banana_tree_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_banyan_tree_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_chicken_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_chouki_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_chula_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_clothesline_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_dala_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_fence_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_haystack_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 4,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_house_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 6,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_jharu_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_kolshi_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_kula_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_lantern_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_pati_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_piri_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "collision/prop_pots_col.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 3,
+  "messages": []
+ },
+ {
+  "file": "guti_clay_shard.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "guti_pebble_dark.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "guti_pebble_light.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "guti_pebble_variations.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "guti_tamarind_seed.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 1,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_banana_tree_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_banana_tree_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_banyan_tree_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_banyan_tree_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_chicken_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 4,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_chicken_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 4,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_chula_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_chula_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_clothesline_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_clothesline_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_dala_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_dala_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_fence_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_haystack_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_haystack_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_house_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_jharu_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_jharu_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_kolshi_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_kolshi_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_kula_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_kula_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_lantern_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_lantern_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_pati_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_pati_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_pots_lod1.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "lod/prop_pots_lod2.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "prop_banana_tree.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_banyan_tree.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_chicken.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 4,
+  "messages": []
+ },
+ {
+  "file": "prop_chouki.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_chula.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_clothesline.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_dala.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_fence.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_haystack.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_house.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_jharu.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_kolshi.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_kula.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_lantern.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ },
+ {
+  "file": "prop_pati.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_piri.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 0,
+  "messages": []
+ },
+ {
+  "file": "prop_pots.glb",
+  "errors": 0,
+  "warnings": 0,
+  "infos": 2,
+  "messages": []
+ }
+]
