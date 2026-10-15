@@ -6,3 +6,4 @@ Thumbs.db
 *.zip
 tools/out/
 .claude/launch.json
+www/

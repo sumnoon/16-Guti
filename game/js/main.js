@@ -27,7 +27,8 @@ const settings = {
 // ------------------------------------------------------------------ renderer
 const canvas = $('scene');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-renderer.setPixelRatio(Math.min(devicePixelRatio, settings.quality ? 2 : 1.5));
+// Battery saver renders at CSS-pixel resolution: on phones (devicePixelRatio 2.5-3) that is the biggest single saving.
+renderer.setPixelRatio(Math.min(devicePixelRatio, settings.quality ? 2 : 1));
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
@@ -402,6 +403,15 @@ function frame() {
   if (pieces) pieces.update(dt);
   renderer.render(scene, camera);
   requestAnimationFrame(frame);
+}
+
+// ------------------------------------------------------------------ app lifecycle
+// Silence the ambience while the tab or Android app is in the background.
+document.addEventListener('visibilitychange', () => { if (sfx.ctx) document.hidden ? sfx.ctx.suspend() : (sfx.on && sfx.ctx.resume()); });
+// Offline play for the installed web app. Skipped on localhost (keeps the edit-refresh loop fresh)
+// and inside the Capacitor Android app, which already ships every file.
+if ('serviceWorker' in navigator && location.protocol === 'https:' && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && !(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform())) {
+  addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
 
 // ------------------------------------------------------------------ boot

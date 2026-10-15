@@ -1,0 +1,15 @@
+{
+  "appId": "io.github.sumnoon.shologuti",
+  "appName": "Sholo Guti",
+  "webDir": "www",
+  "backgroundColor": "#26180f",
+  "android": {
+    "backgroundColor": "#26180f",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SystemBars": {
+      "initialViewportFitValueHint": "cover"
+    }
+  }
+}

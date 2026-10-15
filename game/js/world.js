@@ -208,6 +208,22 @@ function makePoints(count, color, size, spread, centre, glow, additive = true) {
 }
 
 // ---------------------------------------------------------------- props
+// Replace many placed copies of one model with one InstancedMesh per mesh: a single draw call each
+// instead of one per copy (the fence ring is ~38 copies). Each instance keeps its own placement and
+// the mesh's own node transform (which carries the quantization scale).
+function instanced(scene, copies) {
+  if (copies.length < 2) return;
+  for (const c of copies) c.updateMatrixWorld(true);
+  const parts = []; copies[0].traverse((m) => { if (m.isMesh) parts.push(m); });
+  parts.forEach((part, k) => {
+    const inst = new THREE.InstancedMesh(part.geometry, part.material, copies.length);
+    copies.forEach((c, i) => { const m = []; c.traverse((x) => { if (x.isMesh) m.push(x); }); inst.setMatrixAt(i, m[k].matrixWorld); });
+    inst.castShadow = part.castShadow; inst.receiveShadow = part.receiveShadow;
+    inst.computeBoundingSphere(); scene.add(inst);
+  });
+  for (const c of copies) scene.remove(c);
+}
+
 function placeProps(scene, M, rnd, quality) {
   const put = (name, x, z, ry = 0, s = 1, opt = {}) => {
     const src = M[name]; if (!src) return null;
@@ -221,13 +237,15 @@ function placeProps(scene, M, rnd, quality) {
   out.banyan = put('prop_banyan_tree', -7.8, -5.8, 0.6, 1);
   put('prop_house', 8.6, -6.2, -Math.PI / 2 + 0.25, 1);
   // fence: back, sides, front
+  // One instanced mesh per side, so a side behind the camera is still culled as a whole.
   const fence = (x0, z0, x1, z1) => {
-    const len = Math.hypot(x1 - x0, z1 - z0), n = Math.round(len / 2), ang = Math.atan2(-(z1 - z0), x1 - x0);
+    const len = Math.hypot(x1 - x0, z1 - z0), n = Math.round(len / 2), ang = Math.atan2(-(z1 - z0), x1 - x0), side = [];
     for (let i = 0; i < n; i++) {
       const t = (i + 0.5) / n;
       const f = put('prop_fence', x0 + (x1 - x0) * t, z0 + (z1 - z0) * t, ang + (rnd() - 0.5) * 0.06, 1, { shadow: quality > 0 });
-      if (f) { f.scale.y = 0.9 + rnd() * 0.18; f.rotation.z = (rnd() - 0.5) * 0.04; }
+      if (f) { f.scale.y = 0.9 + rnd() * 0.18; f.rotation.z = (rnd() - 0.5) * 0.04; side.push(f); }
     }
+    instanced(scene, side);
   };
   fence(-14, -11.5, 13, -11.5); fence(-14, 9, -14, -11.5); fence(13, -11.5, 13, 9); fence(-14, 9, 13, 9);
   put('prop_haystack', 3.4, -14.2, 0.4, 1);

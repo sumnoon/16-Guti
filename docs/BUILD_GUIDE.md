@@ -213,6 +213,14 @@ caching of all assets with a service worker). Then set up Capacitor to build an 
 from game/, and write the exact steps to produce a signed APK/AAB for the Play Store.
 ```
 
+**Status: done.** The game is an installable web app and a Capacitor Android project (`android/`).
+Follow [ANDROID.md](ANDROID.md) to build, install on a phone and publish. Useful next prompt:
+
+```
+Make the Android back button open the in-game menu instead of closing the app
+(add @capacitor/app), and close the app only from the menu screen.
+```
+
 For the highest-quality mobile version later, port to **Unity (URP)**:
 
 ```

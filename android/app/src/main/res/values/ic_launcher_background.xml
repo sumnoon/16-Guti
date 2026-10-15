@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#C99A6A</color>
+    <!-- Page background (the soil colour in game/page.html); used behind the splash and the WebView. -->
+    <color name="soil">#26180F</color>
+</resources>

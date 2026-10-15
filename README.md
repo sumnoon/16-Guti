@@ -16,7 +16,9 @@ The first environment, **Village Uthan** (a mud courtyard under a banyan tree), 
 
 Both start a local web server with Python on port 8080 and open http://localhost:8080.
 Opening `index.html` directly from disk does not work, because browsers block loading the 3D files from `file://`.
-three.js comes from the jsDelivr CDN, so the first launch needs internet.
+Everything, including three.js and the fonts, is bundled, so the game runs offline.
+
+**Android:** the same game is packaged as an Android app with Capacitor. See [docs/ANDROID.md](docs/ANDROID.md) for building, installing on a phone and publishing on Google Play.
 
 Any static web host works too (GitHub Pages: serve the `game/` folder).
 
@@ -45,20 +47,27 @@ game/                    the playable game (static files, no build step)
   assets/models/*.json   models as base64-wrapped GLB (served by any host, incl. Claude artifacts)
   assets/models-glb/     the same optimized models as plain .glb, for Unity / Godot / Blender
   assets/tex/            seamless ground textures + normal maps, the three panoramas
-  assets/ui/             loading art, Dadu portrait
+  assets/ui/             loading art, Dadu portrait, app icons
+  vendor/                three.js r169 and the fonts, bundled for offline play
+  manifest.webmanifest   installable web app; sw.js caches it for offline use
 art/                     original source art for Village Uthan (from ChatGPT), full resolution
   art_bible.txt          art direction: palette, materials, lighting, rules
   concepts/              concept art + the exact prompts used
   textures/ panoramas/ models/ ui/ previews/ production/
 tools/                   asset pipeline, tests, screenshot tool
   prepare_assets.py      art/ -> game/assets/ (resize + WebP models, seamless textures, normal maps)
+  make_icons.py          app icon for the web app and Android, Android splash screens
+  build_web.py           game/ -> www/ (runtime files only) for the Android app
   test_rules.mjs         rules checks + AI self-play
   screenshot.py          headless screenshots of the running game
 docs/
   BUILD_GUIDE.md         step-by-step guide to continue with Claude Code
   GAME_PLAN.md           design plan, environments, roadmap, status
   ASSET_PROMPTS.md       ChatGPT prompts for the art, and templates for the next environments
+  ANDROID.md             build, install and publish the Android app
   screenshots/
+android/                 Capacitor Android project (open in Android Studio)
+package.json             Capacitor packages and the android:* npm scripts
 CLAUDE.md                technical notes for continuing development (also read by Claude Code)
 ```
 

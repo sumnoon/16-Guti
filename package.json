@@ -1,0 +1,19 @@
+{
+  "name": "sholo-guti",
+  "private": true,
+  "description": "Sholo Guti: the web game in game/, packaged for Android with Capacitor",
+  "scripts": {
+    "web": "python tools/build_web.py",
+    "android:sync": "python tools/build_web.py && cap sync android",
+    "android:open": "cap open android",
+    "android:debug": "python tools/build_web.py && cap sync android && cd android && gradlew.bat assembleDebug",
+    "android:release": "python tools/build_web.py && cap sync android && cd android && gradlew.bat bundleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2"
+  }
+}

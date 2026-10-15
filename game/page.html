@@ -1,8 +1,6 @@
 <title>Sholo Guti</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Tiro+Bangla:ital@0;1&display=swap">
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
 <style>
 /* Layout: full-bleed 3D courtyard; UI floats over it like objects laid on a jute mat — menu panel left, player cards top, tool row bottom. */
 :root {
@@ -218,5 +216,5 @@ body[data-pieces="village"] .pips[data-player="2"] i { background: #4a2614; box-
   </div>
 </div>
 
-<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+<script type="importmap">{ "imports": { "three": "./vendor/three/build/three.module.min.js", "three/addons/": "./vendor/three/examples/jsm/" } }</script>
 <script type="module" src="js/main.js"></script>
