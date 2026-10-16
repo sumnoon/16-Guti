@@ -1,0 +1,255 @@
+[
+  {
+    "name": "rooftop_tex_cement",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 21.77,
+      "vertical_wrap_error": 27.66,
+      "interior_neighbor_error": 18.32
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 17.85
+    }
+  },
+  {
+    "name": "rooftop_tex_plaster_old",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 34.99,
+      "vertical_wrap_error": 26.02,
+      "interior_neighbor_error": 16.21
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 14.01
+    }
+  },
+  {
+    "name": "rooftop_tex_brick_old",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 22.84,
+      "vertical_wrap_error": 43.73,
+      "interior_neighbor_error": 13.41
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 12.41
+    }
+  },
+  {
+    "name": "rooftop_tex_parapet_paint",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 21.85,
+      "vertical_wrap_error": 21.23,
+      "interior_neighbor_error": 13.81
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 12.75
+    }
+  },
+  {
+    "name": "rooftop_tex_tarp",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 21.54,
+      "vertical_wrap_error": 19.18,
+      "interior_neighbor_error": 14.19
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 13.17
+    }
+  },
+  {
+    "name": "rooftop_tex_jute_mat",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 35.39,
+      "vertical_wrap_error": 26.76,
+      "interior_neighbor_error": 14.08
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 0.0,
+      "interior_neighbor_error": 12.06
+    }
+  },
+  {
+    "name": "rooftop_tex_facade_day",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "before": {
+      "horizontal_wrap_error": 48.44,
+      "vertical_wrap_error": 47.24,
+      "interior_neighbor_error": 15.57
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 46.6,
+      "interior_neighbor_error": 15.34
+    }
+  },
+  {
+    "name": "rooftop_tex_facade_night",
+    "derived_from": "rooftop_tex_facade_day",
+    "geometry_pixel_aligned": true,
+    "size": [
+      1254,
+      1254
+    ],
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 17.29,
+      "interior_neighbor_error": 6.24
+    }
+  },
+  {
+    "name": "rooftop_pano_dusk",
+    "source_size": [
+      1774,
+      887
+    ],
+    "size": [
+      2048,
+      1024
+    ],
+    "before": {
+      "horizontal_wrap_error": 36.43,
+      "vertical_wrap_error": 36.17,
+      "interior_neighbor_error": 6.49
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 34.33,
+      "interior_neighbor_error": 5.35
+    },
+    "top_row_std": 7.049916206369744e-15,
+    "bottom_row_std": 6.679841864828025e-15,
+    "shared_wrap_overlap": 59,
+    "upscaled": true
+  },
+  {
+    "name": "rooftop_pano_night",
+    "source_size": [
+      1774,
+      887
+    ],
+    "size": [
+      2048,
+      1024
+    ],
+    "before": {
+      "horizontal_wrap_error": 31.94,
+      "vertical_wrap_error": 47.06,
+      "interior_neighbor_error": 5.39
+    },
+    "after": {
+      "horizontal_wrap_error": 0.0,
+      "vertical_wrap_error": 42.67,
+      "interior_neighbor_error": 4.43
+    },
+    "top_row_std": 4.76470714734963e-16,
+    "bottom_row_std": 3.0068540250264655e-15,
+    "shared_wrap_overlap": 59,
+    "upscaled": true
+  },
+  {
+    "name": "rooftop_fx_fireworks",
+    "size": [
+      2048,
+      2048
+    ],
+    "cell_px": 512,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "upscaled": true,
+    "pure_black_background": true
+  },
+  {
+    "name": "rooftop_fx_fire_breath",
+    "size": [
+      2048,
+      2048
+    ],
+    "cell_px": 512,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "upscaled": true,
+    "pure_black_background": true
+  },
+  {
+    "name": "rooftop_fx_sparks",
+    "size": [
+      2048,
+      2048
+    ],
+    "cell_px": 512,
+    "source_size": [
+      1254,
+      1254
+    ],
+    "upscaled": true,
+    "pure_black_background": true
+  }
+]

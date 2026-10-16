@@ -1,0 +1,436 @@
+[
+  {
+    "name": "guti_marble_glass",
+    "triangles": 1290,
+    "objects": 1,
+    "embedded_images": 0,
+    "texture_px": null,
+    "bytes": 36508,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.025,
+        0.0245
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "guti_bottle_cap",
+    "triangles": 756,
+    "objects": 1,
+    "embedded_images": 5,
+    "texture_px": 256,
+    "bytes": 162736,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        0.025,
+        0.025,
+        0.004
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_parapet_segment",
+    "triangles": 12,
+    "objects": 1,
+    "embedded_images": 2,
+    "texture_px": 1024,
+    "bytes": 541428,
+    "budget": 1500,
+    "dimensions_m": [
+      [
+        2.0,
+        0.15,
+        1.0
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_water_tank",
+    "triangles": 2828,
+    "objects": 1,
+    "embedded_images": 8,
+    "texture_px": 512,
+    "bytes": 632708,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        1.1,
+        1.04,
+        1.4
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_chilekotha",
+    "triangles": 324,
+    "objects": 1,
+    "embedded_images": 12,
+    "texture_px": 1024,
+    "bytes": 2418516,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        2.5,
+        2.5,
+        2.4
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_natai_spool",
+    "triangles": 1480,
+    "objects": 1,
+    "embedded_images": 3,
+    "texture_px": 512,
+    "bytes": 220756,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.3,
+        0.166,
+        0.166
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_kite_ghuri",
+    "triangles": 47,
+    "objects": 1,
+    "embedded_images": 5,
+    "texture_px": 512,
+    "bytes": 255992,
+    "budget": 300,
+    "dimensions_m": [
+      [
+        0.393982,
+        0.021311,
+        0.5
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_plastic_chair",
+    "triangles": 1164,
+    "objects": 1,
+    "embedded_images": 3,
+    "texture_px": 512,
+    "bytes": 209752,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.520643,
+        0.540493,
+        0.85
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_string_lights",
+    "triangles": 2170,
+    "objects": 1,
+    "embedded_images": 6,
+    "texture_px": 1024,
+    "bytes": 775544,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        5.0,
+        0.034238,
+        0.502447
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_paper_lantern",
+    "triangles": 1488,
+    "objects": 1,
+    "embedded_images": 3,
+    "texture_px": 512,
+    "bytes": 223788,
+    "budget": 1500,
+    "dimensions_m": [
+      [
+        0.347364,
+        0.347364,
+        0.35
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_fanush",
+    "triangles": 508,
+    "objects": 1,
+    "embedded_images": 9,
+    "texture_px": 512,
+    "bytes": 565808,
+    "budget": 1500,
+    "dimensions_m": [
+      [
+        0.697583,
+        0.697583,
+        1.0
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_flower_pots",
+    "triangles": 4974,
+    "objects": 3,
+    "embedded_images": 10,
+    "texture_px": 512,
+    "bytes": 858864,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        0.28,
+        0.28,
+        0.576
+      ],
+      [
+        0.32,
+        0.319997,
+        0.685
+      ],
+      [
+        0.28,
+        0.28,
+        0.576
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_moa_plate",
+    "triangles": 2784,
+    "objects": 1,
+    "embedded_images": 3,
+    "texture_px": 512,
+    "bytes": 301644,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        0.36,
+        0.36,
+        0.125227
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_speaker",
+    "triangles": 380,
+    "objects": 1,
+    "embedded_images": 6,
+    "texture_px": 1024,
+    "bytes": 717804,
+    "budget": 2000,
+    "dimensions_m": [
+      [
+        0.583379,
+        0.652652,
+        1.672041
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_wire_pole",
+    "triangles": 7410,
+    "objects": 1,
+    "embedded_images": 7,
+    "texture_px": 1024,
+    "bytes": 1703940,
+    "budget": 8000,
+    "dimensions_m": [
+      [
+        3.693346,
+        1.651375,
+        8.0
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "prop_clothesline_roof",
+    "triangles": 962,
+    "objects": 1,
+    "embedded_images": 8,
+    "texture_px": 1024,
+    "bytes": 1210380,
+    "budget": 4000,
+    "dimensions_m": [
+      [
+        3.05,
+        0.120622,
+        2.2
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "bld_oldhaka_block_1",
+    "triangles": 348,
+    "objects": 1,
+    "embedded_images": 11,
+    "texture_px": 1024,
+    "bytes": 2660764,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        5.0,
+        6.58,
+        12.1
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "bld_oldhaka_block_2",
+    "triangles": 906,
+    "objects": 1,
+    "embedded_images": 11,
+    "texture_px": 1024,
+    "bytes": 2684052,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        7.0,
+        6.18,
+        9.3
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "bld_oldhaka_block_3",
+    "triangles": 1694,
+    "objects": 1,
+    "embedded_images": 12,
+    "texture_px": 1024,
+    "bytes": 2447848,
+    "budget": 3000,
+    "dimensions_m": [
+      [
+        6.0,
+        6.38,
+        15.2
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "bld_oldhaka_block_4",
+    "triangles": 1640,
+    "objects": 1,
+    "embedded_images": 14,
+    "texture_px": 1024,
+    "bytes": 3029968,
+    "budget": 3500,
+    "dimensions_m": [
+      [
+        8.0,
+        6.58,
+        6.5
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "bld_mosque",
+    "triangles": 2288,
+    "objects": 1,
+    "embedded_images": 7,
+    "texture_px": 1024,
+    "bytes": 1522928,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        7.0,
+        6.12,
+        9.1
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "char_kite_flyers",
+    "triangles": 9882,
+    "objects": 3,
+    "embedded_images": 11,
+    "texture_px": 1024,
+    "bytes": 1837772,
+    "budget": 12000,
+    "dimensions_m": [
+      [
+        0.674823,
+        0.494267,
+        1.749419
+      ],
+      [
+        0.858142,
+        0.409508,
+        1.817541
+      ],
+      [
+        0.897115,
+        0.329236,
+        1.817535
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  },
+  {
+    "name": "char_fire_breather",
+    "triangles": 2890,
+    "objects": 1,
+    "embedded_images": 13,
+    "texture_px": 1024,
+    "bytes": 1917220,
+    "budget": 6000,
+    "dimensions_m": [
+      [
+        0.850113,
+        0.58425,
+        1.986
+      ]
+    ],
+    "bottom_center_origins": true,
+    "baked_ao": false
+  }
+]

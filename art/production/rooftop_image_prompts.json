@@ -1,0 +1,118 @@
+[
+  {
+    "n": 3,
+    "dir": "concepts",
+    "name": "rooftop_concept_topdown",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Use the supplied master image ONLY as reference for consistent world appearance: left chilekotha, worn turquoise parapet, right black water tank on brick stand, sari/towels clothesline, marigold and tulsi pots, jute mats, lantern and murir moa plate, amber string lights, tightly packed weathered buildings at different heights, iron grilles, warm windows, neighbouring kite flyers with wooden natai, mosque dome/minaret in distance. True overhead near-orthographic aerial layout image of whole playable rooftop and immediate neighbouring roofs, photorealistic, not diagram. Show rectangular rooftop boundary/parapet, tanks, stairwell roof, mats, light strings and narrow dark gaps between buildings clearly. Board area COMPLETELY covered by a jute mat, no visible board. Dusk violet ambient, warm string lights. Neighbouring crowds with kites and spools. Wide 16:9. No labels.",
+    "ref": true
+  },
+  {
+    "n": 4,
+    "dir": "textures",
+    "name": "rooftop_tex_cement",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Stained patched rooftop cement, water marks, old paint drips, fine cracks; subtle local detail without huge focal patches."
+  },
+  {
+    "n": 5,
+    "dir": "textures",
+    "name": "rooftop_tex_plaster_old",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Old Dhaka peeling lime plaster with layers of faded ivory, dusty ochre and pale turquoise colour wash, small exposed brick patches."
+  },
+  {
+    "n": 6,
+    "dir": "textures",
+    "name": "rooftop_tex_brick_old",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Thin old red bricks of Mughal-era proportions in horizontal running bond, crumbling off-white lime mortar; worn irregular edges."
+  },
+  {
+    "n": 7,
+    "dir": "textures",
+    "name": "rooftop_tex_parapet_paint",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Faded turquoise painted plaster rooftop parapet surface with chips and rain streaks. Wall surface only, no wall outline or top edge."
+  },
+  {
+    "n": 8,
+    "dir": "textures",
+    "name": "rooftop_tex_facade_day",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square facade texture. Strictly flat FRONT orthographic view, no perspective. Old Dhaka repeated facade section with iron grille windows, weathered wooden shutters, one small balcony, peeling lime plaster, exposed wires. Neutral even daylight, no strong shadows. Fill image with wall, no sky or ground. Tileable left to right; continuous plaster at both side edges. Highest resolution."
+  },
+  {
+    "n": 9,
+    "dir": "textures",
+    "name": "rooftop_tex_facade_night",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. EDIT supplied daytime facade: keep ALL geometry, window and balcony positions and every architectural feature exactly pixel-aligned. Change ONLY illumination to night with some windows warm yellow lit and others dark, neutral readable wall details. Square, same framing, no perspective, no added objects. Tileable left/right. Exact same layout pixel for pixel.",
+    "ref": false,
+    "dependency": "rooftop_tex_facade_day"
+  },
+  {
+    "n": 10,
+    "dir": "textures",
+    "name": "rooftop_tex_kite_atlas",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square texture atlas: exactly 4 columns x 4 rows of 16 distinct flat FRONT orthographic diamond paper ghuri kite designs on pure white background. Each diamond centered inside its own equal square cell with equal margins. Flat unlit paper colours in festival palette, geometric stripes, two-colour quarters and simple chevrons, subtle aged paper fibers. No tails, no sticks outside diamond, no perspective, no shadows, no labels, no grid lines."
+  },
+  {
+    "n": 11,
+    "dir": "textures",
+    "name": "rooftop_tex_tarp",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Faded blue tarpaulin, fine woven plastic mesh grain, light creases and minor scuffs. Creases represented by material variation, not directional shadows."
+  },
+  {
+    "n": 12,
+    "dir": "textures",
+    "name": "rooftop_tex_jute_mat",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square highest-resolution seamless tileable material texture. Flat straight-on orthographic surface scan, even NEUTRAL lighting, no cast shadows, no perspective, no vignette, no highlights, no objects, edge-to-edge material. Natural tightly woven jute chot mat, warm tan fibers, regular tight over-under weave, frayed individual fibers, continuous weave with no mat border."
+  },
+  {
+    "n": 13,
+    "dir": "panoramas",
+    "name": "rooftop_pano_dusk",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Use the supplied master image ONLY as reference for consistent world appearance: left chilekotha, worn turquoise parapet, right black water tank on brick stand, sari/towels clothesline, marigold and tulsi pots, jute mats, lantern and murir moa plate, amber string lights, tightly packed weathered buildings at different heights, iron grilles, warm windows, neighbouring kite flyers with wooden natai, mosque dome/minaret in distance. 360-degree EQUIRECTANGULAR spherical panorama, exact 2:1 aspect ratio. Rooftop eye level, dense Old Dhaka skyline on horizon, endless roofs different heights, tanks, mosque domes/minarets, hundreds of diamond paper kites in violet-orange dusk sky. No foreground close props or people; bottom foreground clear empty cement. Left and right edges seamless same environment. Full 360 longitude, zenith at top, nadir bottom, horizon at midheight. Not a flat wide-angle photo.",
+    "ref": true
+  },
+  {
+    "n": 14,
+    "dir": "panoramas",
+    "name": "rooftop_pano_night",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. EDIT reference dusk equirectangular panorama to NIGHT. Preserve same skyline geometry and camera pixel for pixel: exact same buildings, roofs, horizon. Deep blue sky, lit windows, amber string lights on many roofs, few remaining kites, distant fireworks. Exact 2:1 equirectangular projection and seamless left/right edge, empty foreground bottom.",
+    "ref": false,
+    "dependency": "rooftop_pano_dusk"
+  },
+  {
+    "n": 15,
+    "dir": "effects",
+    "name": "rooftop_fx_fireworks",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square flat 2D effect sprite sheet: exactly 4x4 evenly spaced grid, pure BLACK background, NO borders NO labels. Four rows each a separate fireworks colour: red, green, gold, magenta. Each row progresses left to right through ignition, expanding burst, full starburst, fading sparks. Each of 16 cells contains ONE centered isolated burst, entirely contained with black padding, no overlap. Bright emissive sparks for additive blending, no scenery or smoke backdrop."
+  },
+  {
+    "n": 16,
+    "dir": "effects",
+    "name": "rooftop_fx_fire_breath",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square flat 2D VFX sprite sheet, pure BLACK background, exactly 4x4 equally spaced cells, no text or borders. 16 sequential frames of ONE fire-breather's flame burst from tiny ignition through growing directional plume, full orange/yellow fire, decay to wisps, in row-major order. Flame originates at same left-center point in every cell, travels right and slightly upward. Consistent scale and anchor throughout. No human/torch, no scenery. Each frame fully isolated with black padding, never overlaps cell edge. Realistic flame for additive blending."
+  },
+  {
+    "n": 17,
+    "dir": "effects",
+    "name": "rooftop_fx_sparks",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Square 2D VFX sprite sheet on pure BLACK, exact 4x4 equal cells. 16 sequential row-major frames of small sparkler crackle, ignition to white-gold branching sparks then fading orange embers. Stable center and scale, one burst per cell, sufficient black padding with no overlap. Flat emissive effect for additive blending, no props, no text/borders."
+  },
+  {
+    "n": 41,
+    "dir": "concepts",
+    "name": "char_rooftop_rival_concept",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Character concept sheet, two full-body views of SAME confident young adult Old Dhaka Bangladeshi man, front and side, equal scale, plain neutral gray background. Bright magenta panjabi, amber scarf, backwards worn cap, holding wooden natai spool wound with green kite string. Realistic skin, natural proportions, lived-in clothing. Photorealistic grounded game character reference, no text or labels. Wide image."
+  },
+  {
+    "n": 42,
+    "dir": "ui",
+    "name": "ui_rooftop_thumbnail",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Use the supplied master image ONLY as reference for consistent world appearance: left chilekotha, worn turquoise parapet, right black water tank on brick stand, sari/towels clothesline, marigold and tulsi pots, jute mats, lantern and murir moa plate, amber string lights, tightly packed weathered buildings at different heights, iron grilles, warm windows, neighbouring kite flyers with wooden natai, mosque dome/minaret in distance. Square level-select artwork: visually clear composition of bright diamond kites over dense Old Dhaka rooftops at violet dusk with amber string lights. Strong readable silhouette at small size. No board visible. No text.",
+    "ref": true
+  },
+  {
+    "n": 43,
+    "dir": "ui",
+    "name": "ui_rooftop_loading",
+    "prompt": "Photorealistic grounded real contemporary Old Dhaka, Shankhari Bazar / Lakshmi Bazar, Shakrain kite festival mid-January. All surfaces aged, weathered and lived-in, stained cement, peeling lime plaster, rusty iron, sun-faded plastic. Never fantasy or cartoon. No readable text, signs, logos or watermark. Palette: violet #5B4A8A, night blue #16213E, amber #FFB84D, red #D7263D, green #1B998B, yellow #F4D35E, magenta #C2185B, plaster #B9A48A, turquoise #5FA8A0, cement #8A8580. Use the supplied master image ONLY as reference for consistent world appearance: left chilekotha, worn turquoise parapet, right black water tank on brick stand, sari/towels clothesline, marigold and tulsi pots, jute mats, lantern and murir moa plate, amber string lights, tightly packed weathered buildings at different heights, iron grilles, warm windows, neighbouring kite flyers with wooden natai, mosque dome/minaret in distance. 16:9 cinematic loading art at NIGHT. Two adult Bangladeshi men, player and confident rooftop rival in magenta panjabi amber scarf and backwards cap, sit facing each other across a jute mat. Central game area is SIMPLE BARE CEMENT, NO board lines or pieces. Festival kites and fireworks above, warm lights, next-roof cheering crowd. Keep upper quarter relatively uncluttered dark sky for future title, generate NO text.",
+    "ref": true
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "requested_assets": 43,
+  "checks": [
+    {
+      "name": "rooftop_tex_cement",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_plaster_old",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_brick_old",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_parapet_paint",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_facade_day",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_facade_night",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_tarp",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_tex_jute_mat",
+      "repeat_edges": "PASS"
+    },
+    {
+      "name": "rooftop_pano_dusk",
+      "ratio_wrap_poles": "PASS"
+    },
+    {
+      "name": "rooftop_pano_night",
+      "ratio_wrap_poles": "PASS"
+    },
+    {
+      "name": "rooftop_fx_fireworks",
+      "16_cells_black_boundaries": "PASS"
+    },
+    {
+      "name": "rooftop_fx_fire_breath",
+      "16_cells_black_boundaries": "PASS"
+    },
+    {
+      "name": "rooftop_fx_sparks",
+      "16_cells_black_boundaries": "PASS"
+    }
+  ]
+}

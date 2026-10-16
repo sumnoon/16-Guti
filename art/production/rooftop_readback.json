@@ -1,0 +1,163 @@
+[
+  {
+    "name": "guti_marble_glass",
+    "readback": "PASS",
+    "triangles": 1290,
+    "objects": 1,
+    "embedded_images": 0
+  },
+  {
+    "name": "guti_bottle_cap",
+    "readback": "PASS",
+    "triangles": 756,
+    "objects": 1,
+    "embedded_images": 5
+  },
+  {
+    "name": "prop_parapet_segment",
+    "readback": "PASS",
+    "triangles": 12,
+    "objects": 1,
+    "embedded_images": 2
+  },
+  {
+    "name": "prop_water_tank",
+    "readback": "PASS",
+    "triangles": 2828,
+    "objects": 1,
+    "embedded_images": 8
+  },
+  {
+    "name": "prop_chilekotha",
+    "readback": "PASS",
+    "triangles": 324,
+    "objects": 1,
+    "embedded_images": 12
+  },
+  {
+    "name": "prop_natai_spool",
+    "readback": "PASS",
+    "triangles": 1480,
+    "objects": 1,
+    "embedded_images": 3
+  },
+  {
+    "name": "prop_kite_ghuri",
+    "readback": "PASS",
+    "triangles": 47,
+    "objects": 1,
+    "embedded_images": 5
+  },
+  {
+    "name": "prop_plastic_chair",
+    "readback": "PASS",
+    "triangles": 1164,
+    "objects": 1,
+    "embedded_images": 3
+  },
+  {
+    "name": "prop_string_lights",
+    "readback": "PASS",
+    "triangles": 2170,
+    "objects": 1,
+    "embedded_images": 6
+  },
+  {
+    "name": "prop_paper_lantern",
+    "readback": "PASS",
+    "triangles": 1488,
+    "objects": 1,
+    "embedded_images": 3
+  },
+  {
+    "name": "prop_fanush",
+    "readback": "PASS",
+    "triangles": 508,
+    "objects": 1,
+    "embedded_images": 9
+  },
+  {
+    "name": "prop_flower_pots",
+    "readback": "PASS",
+    "triangles": 4974,
+    "objects": 3,
+    "embedded_images": 10
+  },
+  {
+    "name": "prop_moa_plate",
+    "readback": "PASS",
+    "triangles": 2784,
+    "objects": 1,
+    "embedded_images": 3
+  },
+  {
+    "name": "prop_speaker",
+    "readback": "PASS",
+    "triangles": 380,
+    "objects": 1,
+    "embedded_images": 6
+  },
+  {
+    "name": "prop_wire_pole",
+    "readback": "PASS",
+    "triangles": 7410,
+    "objects": 1,
+    "embedded_images": 7
+  },
+  {
+    "name": "prop_clothesline_roof",
+    "readback": "PASS",
+    "triangles": 962,
+    "objects": 1,
+    "embedded_images": 8
+  },
+  {
+    "name": "bld_oldhaka_block_1",
+    "readback": "PASS",
+    "triangles": 348,
+    "objects": 1,
+    "embedded_images": 11
+  },
+  {
+    "name": "bld_oldhaka_block_2",
+    "readback": "PASS",
+    "triangles": 906,
+    "objects": 1,
+    "embedded_images": 11
+  },
+  {
+    "name": "bld_oldhaka_block_3",
+    "readback": "PASS",
+    "triangles": 1694,
+    "objects": 1,
+    "embedded_images": 12
+  },
+  {
+    "name": "bld_oldhaka_block_4",
+    "readback": "PASS",
+    "triangles": 1640,
+    "objects": 1,
+    "embedded_images": 14
+  },
+  {
+    "name": "bld_mosque",
+    "readback": "PASS",
+    "triangles": 2288,
+    "objects": 1,
+    "embedded_images": 7
+  },
+  {
+    "name": "char_kite_flyers",
+    "readback": "PASS",
+    "triangles": 9882,
+    "objects": 3,
+    "embedded_images": 11
+  },
+  {
+    "name": "char_fire_breather",
+    "readback": "PASS",
+    "triangles": 2890,
+    "objects": 1,
+    "embedded_images": 13
+  }
+]

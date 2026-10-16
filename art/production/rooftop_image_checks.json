@@ -1,0 +1,232 @@
+[
+  {
+    "name": "char_rooftop_rival_concept",
+    "file": "concepts/char_rooftop_rival_concept.png",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "name": "rooftop_concept_main",
+    "file": "concepts/rooftop_concept_main.png",
+    "size": [
+      1672,
+      941
+    ]
+  },
+  {
+    "name": "rooftop_concept_player",
+    "file": "concepts/rooftop_concept_player.png",
+    "size": [
+      1672,
+      941
+    ]
+  },
+  {
+    "name": "rooftop_concept_topdown",
+    "file": "concepts/rooftop_concept_topdown.png",
+    "size": [
+      1672,
+      941
+    ]
+  },
+  {
+    "name": "rooftop_tex_brick_old",
+    "file": "textures/rooftop_tex_brick_old.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 12.41,
+    "interior_vertical_error": 13.63
+  },
+  {
+    "name": "rooftop_tex_cement",
+    "file": "textures/rooftop_tex_cement.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 17.85,
+    "interior_vertical_error": 18.38
+  },
+  {
+    "name": "rooftop_tex_facade_day",
+    "file": "textures/rooftop_tex_facade_day.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 46.6,
+    "interior_horizontal_error": 15.34,
+    "interior_vertical_error": 14.41
+  },
+  {
+    "name": "rooftop_tex_facade_emissive",
+    "file": "textures/rooftop_tex_facade_emissive.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 1.97,
+    "interior_vertical_error": 1.12
+  },
+  {
+    "name": "rooftop_tex_facade_night",
+    "file": "textures/rooftop_tex_facade_night.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 17.29,
+    "interior_horizontal_error": 6.24,
+    "interior_vertical_error": 5.65
+  },
+  {
+    "name": "rooftop_tex_jute_mat",
+    "file": "textures/rooftop_tex_jute_mat.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 12.06,
+    "interior_vertical_error": 14.28
+  },
+  {
+    "name": "rooftop_tex_kite_atlas",
+    "file": "textures/rooftop_tex_kite_atlas.png",
+    "size": [
+      1280,
+      1280
+    ]
+  },
+  {
+    "name": "rooftop_tex_parapet_paint",
+    "file": "textures/rooftop_tex_parapet_paint.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 12.75,
+    "interior_vertical_error": 13.17
+  },
+  {
+    "name": "rooftop_tex_plaster_old",
+    "file": "textures/rooftop_tex_plaster_old.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 14.01,
+    "interior_vertical_error": 16.67
+  },
+  {
+    "name": "rooftop_tex_tarp",
+    "file": "textures/rooftop_tex_tarp.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 0.0,
+    "interior_horizontal_error": 13.17,
+    "interior_vertical_error": 15.92
+  },
+  {
+    "name": "rooftop_pano_dusk",
+    "file": "panoramas/rooftop_pano_dusk.png",
+    "size": [
+      2048,
+      1024
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 34.33,
+    "interior_horizontal_error": 5.35,
+    "interior_vertical_error": 6.99
+  },
+  {
+    "name": "rooftop_pano_night",
+    "file": "panoramas/rooftop_pano_night.png",
+    "size": [
+      2048,
+      1024
+    ],
+    "horizontal_wrap_error": 0.0,
+    "vertical_wrap_error": 42.67,
+    "interior_horizontal_error": 4.43,
+    "interior_vertical_error": 5.65
+  },
+  {
+    "name": "rooftop_fx_fireworks",
+    "file": "effects/rooftop_fx_fireworks.png",
+    "size": [
+      2048,
+      2048
+    ],
+    "grid": [
+      4,
+      4
+    ],
+    "pixel_dimensions_divisible_by_4": true,
+    "black_pixel_fraction": 0.735
+  },
+  {
+    "name": "rooftop_fx_fire_breath",
+    "file": "effects/rooftop_fx_fire_breath.png",
+    "size": [
+      2048,
+      2048
+    ],
+    "grid": [
+      4,
+      4
+    ],
+    "pixel_dimensions_divisible_by_4": true,
+    "black_pixel_fraction": 0.7957
+  },
+  {
+    "name": "rooftop_fx_sparks",
+    "file": "effects/rooftop_fx_sparks.png",
+    "size": [
+      2048,
+      2048
+    ],
+    "grid": [
+      4,
+      4
+    ],
+    "pixel_dimensions_divisible_by_4": true,
+    "black_pixel_fraction": 0.8155
+  },
+  {
+    "name": "ui_rooftop_loading",
+    "file": "ui/ui_rooftop_loading.png",
+    "size": [
+      1664,
+      936
+    ]
+  },
+  {
+    "name": "ui_rooftop_thumbnail",
+    "file": "ui/ui_rooftop_thumbnail.png",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+]
