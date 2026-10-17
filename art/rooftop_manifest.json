@@ -1,0 +1,564 @@
+{
+  "environment": "Old Dhaka Rooftop Night",
+  "master": "concepts/rooftop_concept_main.png",
+  "approved_option": "C",
+  "asset_count": 43,
+  "assets": [
+    {
+      "number": 1,
+      "name": "rooftop_concept_main",
+      "type": "concepts",
+      "file": "concepts/rooftop_concept_main.png",
+      "bytes": 2908176,
+      "sha256": "8ec7ff8c33e5eef8389acd65ae41610633881e903760666f0ab07ceba9419b39",
+      "preview": "concepts/rooftop_concept_main.png",
+      "size": [
+        1672,
+        941
+      ],
+      "status": "Generated artwork"
+    },
+    {
+      "number": 2,
+      "name": "rooftop_concept_player",
+      "type": "concepts",
+      "file": "concepts/rooftop_concept_player.png",
+      "bytes": 2705237,
+      "sha256": "00faacf426f98cb8b1cb84517c36d5120ad7ee8c18f51b1704373a6622f64604",
+      "preview": "concepts/rooftop_concept_player.png",
+      "size": [
+        1672,
+        941
+      ],
+      "status": "Generated artwork"
+    },
+    {
+      "number": 3,
+      "name": "rooftop_concept_topdown",
+      "type": "concepts",
+      "file": "concepts/rooftop_concept_topdown.png",
+      "bytes": 3431713,
+      "sha256": "eaffce66071514d03b8caf0afceb1e12597ecb3382dc8398f4c81133a0ee2181",
+      "preview": "concepts/rooftop_concept_topdown.png",
+      "size": [
+        1672,
+        941
+      ],
+      "status": "Generated artwork"
+    },
+    {
+      "number": 4,
+      "name": "rooftop_tex_cement",
+      "type": "textures",
+      "file": "textures/rooftop_tex_cement.png",
+      "bytes": 3636176,
+      "sha256": "8873419111808043fe548c12d2c023e50570e859458098f1bd3586250be4b53c",
+      "preview": "textures/rooftop_tex_cement.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 5,
+      "name": "rooftop_tex_plaster_old",
+      "type": "textures",
+      "file": "textures/rooftop_tex_plaster_old.png",
+      "bytes": 3575867,
+      "sha256": "637eb6bfe6f674b2515428017901ffb58659608b53307bac0af9866eb3b7f428",
+      "preview": "textures/rooftop_tex_plaster_old.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 6,
+      "name": "rooftop_tex_brick_old",
+      "type": "textures",
+      "file": "textures/rooftop_tex_brick_old.png",
+      "bytes": 3403725,
+      "sha256": "7cd6f38805bbb18fa174d351209098d743071b088b4da178599bc7786122d406",
+      "preview": "textures/rooftop_tex_brick_old.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 7,
+      "name": "rooftop_tex_parapet_paint",
+      "type": "textures",
+      "file": "textures/rooftop_tex_parapet_paint.png",
+      "bytes": 3434129,
+      "sha256": "247e787a8d5567b6ee3197f9a82d33142cdfdf16db99a24f331a4ce15bd63966",
+      "preview": "textures/rooftop_tex_parapet_paint.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 8,
+      "name": "rooftop_tex_facade_day",
+      "type": "textures",
+      "file": "textures/rooftop_tex_facade_day.png",
+      "bytes": 3422666,
+      "sha256": "f3a94a6da1a7f8a3c49d65e1de30c52606a1eccb6bcaddb0a8a91a6a403b618f",
+      "preview": "textures/rooftop_tex_facade_day.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 9,
+      "name": "rooftop_tex_facade_night",
+      "type": "textures",
+      "file": "textures/rooftop_tex_facade_night.png",
+      "bytes": 2583607,
+      "sha256": "adfa8afc25a73faa49f9c050e8c17f080429128f978fb8e09655e47df615678a",
+      "preview": "textures/rooftop_tex_facade_night.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 10,
+      "name": "rooftop_tex_kite_atlas",
+      "type": "textures",
+      "file": "textures/rooftop_tex_kite_atlas.png",
+      "bytes": 1762620,
+      "sha256": "68aa0127ae3a8e2a5405ad414798b39490e7748916d114749d4e41a9ac940ac2",
+      "preview": "textures/rooftop_tex_kite_atlas.png",
+      "size": [
+        1280,
+        1280
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 11,
+      "name": "rooftop_tex_tarp",
+      "type": "textures",
+      "file": "textures/rooftop_tex_tarp.png",
+      "bytes": 3515052,
+      "sha256": "1bdd2106f7996d13106c9ab88114f15cc33c2533f72511ac035ac8e2fac09366",
+      "preview": "textures/rooftop_tex_tarp.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 12,
+      "name": "rooftop_tex_jute_mat",
+      "type": "textures",
+      "file": "textures/rooftop_tex_jute_mat.png",
+      "bytes": 3326907,
+      "sha256": "808324aafd5682e6f5b3b123f1fb9b05d7ca4c6f7b8bf5e7359b872c118c9c65",
+      "preview": "textures/rooftop_tex_jute_mat.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Finished texture; repeat axes in handoff"
+    },
+    {
+      "number": 13,
+      "name": "rooftop_pano_dusk",
+      "type": "panoramas",
+      "file": "panoramas/rooftop_pano_dusk.png",
+      "bytes": 3184512,
+      "sha256": "88674be7e2fa1a79eaeb2145e1bdffc20ce0e1c6a20c7ab6f4579b125329b7cf",
+      "preview": "panoramas/rooftop_pano_dusk.png",
+      "size": [
+        2048,
+        1024
+      ],
+      "status": "LDR panorama; wrap and poles corrected"
+    },
+    {
+      "number": 14,
+      "name": "rooftop_pano_night",
+      "type": "panoramas",
+      "file": "panoramas/rooftop_pano_night.png",
+      "bytes": 2732719,
+      "sha256": "b473d52117f062cb5db4142d4e0fe2468c9ef2cde1936f5c6770374253491d98",
+      "preview": "panoramas/rooftop_pano_night.png",
+      "size": [
+        2048,
+        1024
+      ],
+      "status": "LDR panorama; wrap and poles corrected"
+    },
+    {
+      "number": 15,
+      "name": "rooftop_fx_fireworks",
+      "type": "effects",
+      "file": "effects/rooftop_fx_fireworks.png",
+      "bytes": 2335143,
+      "sha256": "0596aefc5af437bb837b4474d927189bef46a514161ff7b6cb8761527bb9c7dd",
+      "preview": "effects/rooftop_fx_fireworks.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "status": "4 x 4 effect sheet \u00b7 512 px cells"
+    },
+    {
+      "number": 16,
+      "name": "rooftop_fx_fire_breath",
+      "type": "effects",
+      "file": "effects/rooftop_fx_fire_breath.png",
+      "bytes": 1609180,
+      "sha256": "55d34ccf110aa830517c9f96d8f382946e8a1b8fee1c24988a3be9ca6f9dbb66",
+      "preview": "effects/rooftop_fx_fire_breath.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "status": "4 x 4 effect sheet \u00b7 512 px cells"
+    },
+    {
+      "number": 17,
+      "name": "rooftop_fx_sparks",
+      "type": "effects",
+      "file": "effects/rooftop_fx_sparks.png",
+      "bytes": 1622217,
+      "sha256": "a8b1e65d4e36e7a0abb0ab5f5bf11f89502036a75864b0dad40434cd7ce84e00",
+      "preview": "effects/rooftop_fx_sparks.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "status": "4 x 4 effect sheet \u00b7 512 px cells"
+    },
+    {
+      "number": 18,
+      "name": "guti_marble_glass",
+      "type": "models",
+      "file": "models/guti_marble_glass.glb",
+      "bytes": 36508,
+      "sha256": "1a826df4b4fa7820ce89cea8d188078dbe774e058d19dd41e754354c79bbbbdb",
+      "preview": "previews/guti_marble_glass.png",
+      "triangles": 1290,
+      "budget": 2000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 19,
+      "name": "guti_bottle_cap",
+      "type": "models",
+      "file": "models/guti_bottle_cap.glb",
+      "bytes": 162736,
+      "sha256": "a5769814549448fe8c7b54054b16986b2422a6af3b2197c6b7091dbaa212dcf1",
+      "preview": "previews/guti_bottle_cap.png",
+      "triangles": 756,
+      "budget": 2000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 20,
+      "name": "prop_parapet_segment",
+      "type": "models",
+      "file": "models/prop_parapet_segment.glb",
+      "bytes": 541428,
+      "sha256": "b00c89d82fa909c96d1d75a61eca0a451f64dd913ef24af6e9459d6c3581305a",
+      "preview": "previews/prop_parapet_segment.png",
+      "triangles": 12,
+      "budget": 1500,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 21,
+      "name": "prop_water_tank",
+      "type": "models",
+      "file": "models/prop_water_tank.glb",
+      "bytes": 632708,
+      "sha256": "1cf7abe5559636fd37978b934517353179cb6645091ec97ebcd47aa74860d378",
+      "preview": "previews/prop_water_tank.png",
+      "triangles": 2828,
+      "budget": 4000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 22,
+      "name": "prop_chilekotha",
+      "type": "models",
+      "file": "models/prop_chilekotha.glb",
+      "bytes": 2418516,
+      "sha256": "6ec91753182165f672ac1077ef1b4ec47171c5fc8cc3cae55e65b20868dd1d85",
+      "preview": "previews/prop_chilekotha.png",
+      "triangles": 324,
+      "budget": 6000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 23,
+      "name": "prop_natai_spool",
+      "type": "models",
+      "file": "models/prop_natai_spool.glb",
+      "bytes": 220756,
+      "sha256": "ac7f20587d964e75bae63addb3015c4aa883f948d75166ec83ec2189c0dac5df",
+      "preview": "previews/prop_natai_spool.png",
+      "triangles": 1480,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 24,
+      "name": "prop_kite_ghuri",
+      "type": "models",
+      "file": "models/prop_kite_ghuri.glb",
+      "bytes": 255992,
+      "sha256": "a4ccae2100569a4dad61c3fa63b094a92b09389f3484c54c20f928fe6a668a62",
+      "preview": "previews/prop_kite_ghuri.png",
+      "triangles": 47,
+      "budget": 300,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 25,
+      "name": "prop_flower_pots",
+      "type": "models",
+      "file": "models/prop_flower_pots.glb",
+      "bytes": 858864,
+      "sha256": "f3ab920a49bda9555d012cdb3bcbc4379387e6857893c0ad87b7fb78ec3a8852",
+      "preview": "previews/prop_flower_pots.png",
+      "triangles": 4974,
+      "budget": 6000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 26,
+      "name": "prop_plastic_chair",
+      "type": "models",
+      "file": "models/prop_plastic_chair.glb",
+      "bytes": 209752,
+      "sha256": "fb172fa6588e83b81ecde0ceefeddc216e3c5f5af2ad471012c383265dfe4cb0",
+      "preview": "previews/prop_plastic_chair.png",
+      "triangles": 1164,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 27,
+      "name": "prop_string_lights",
+      "type": "models",
+      "file": "models/prop_string_lights.glb",
+      "bytes": 775544,
+      "sha256": "c185a276f4140990d6083693de79fb3fc735a513ac24fbe66463a78c65c9c13c",
+      "preview": "previews/prop_string_lights.png",
+      "triangles": 2170,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 28,
+      "name": "prop_paper_lantern",
+      "type": "models",
+      "file": "models/prop_paper_lantern.glb",
+      "bytes": 223788,
+      "sha256": "3408df1623c85f60845018a18a0c8e4c5bd3ecb8e1651eade9805b12473dc1cf",
+      "preview": "previews/prop_paper_lantern.png",
+      "triangles": 1488,
+      "budget": 1500,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 29,
+      "name": "prop_fanush",
+      "type": "models",
+      "file": "models/prop_fanush.glb",
+      "bytes": 565808,
+      "sha256": "9cf99e91b198acb1b9194e418f976d3d039d814544e8ffb21919bd4eedca0c2f",
+      "preview": "previews/prop_fanush.png",
+      "triangles": 508,
+      "budget": 1500,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 30,
+      "name": "prop_moa_plate",
+      "type": "models",
+      "file": "models/prop_moa_plate.glb",
+      "bytes": 301644,
+      "sha256": "0300189ea0ea32c29d2c667d1cf9a2db816dc105212271161dd773ad43afe9ef",
+      "preview": "previews/prop_moa_plate.png",
+      "triangles": 2784,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 31,
+      "name": "prop_speaker",
+      "type": "models",
+      "file": "models/prop_speaker.glb",
+      "bytes": 717804,
+      "sha256": "18b0afa2ed2232895d2e9b5298421f17589d8493acff736f18cd2e2001fce41d",
+      "preview": "previews/prop_speaker.png",
+      "triangles": 380,
+      "budget": 2000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 32,
+      "name": "prop_wire_pole",
+      "type": "models",
+      "file": "models/prop_wire_pole.glb",
+      "bytes": 1703940,
+      "sha256": "835c427a5bf472c9b160694739951db14c75e9ffefe26422e24a9efde333d3c7",
+      "preview": "previews/prop_wire_pole.png",
+      "triangles": 7410,
+      "budget": 8000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 33,
+      "name": "prop_clothesline_roof",
+      "type": "models",
+      "file": "models/prop_clothesline_roof.glb",
+      "bytes": 1210380,
+      "sha256": "a88fbe214791b404936c9d2c9727ce18192c0ed989a19a60db406d469820e465",
+      "preview": "previews/prop_clothesline_roof.png",
+      "triangles": 962,
+      "budget": 4000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 34,
+      "name": "bld_oldhaka_block_1",
+      "type": "models",
+      "file": "models/bld_oldhaka_block_1.glb",
+      "bytes": 2660764,
+      "sha256": "a96353c8241c99273b1eb18728e97a321c4a7c2323e340c44b319f0f9ea82244",
+      "preview": "previews/bld_oldhaka_block_1.png",
+      "triangles": 348,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 35,
+      "name": "bld_oldhaka_block_2",
+      "type": "models",
+      "file": "models/bld_oldhaka_block_2.glb",
+      "bytes": 2684052,
+      "sha256": "60d4a32706d06b89904baefae2848f4dfb09264c3de1abb614d1cd096f262561",
+      "preview": "previews/bld_oldhaka_block_2.png",
+      "triangles": 906,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 36,
+      "name": "bld_oldhaka_block_3",
+      "type": "models",
+      "file": "models/bld_oldhaka_block_3.glb",
+      "bytes": 2447848,
+      "sha256": "d07f6e69c98219a64b64d29965dc491aaa7f23c37b84af448a534f7536304d58",
+      "preview": "previews/bld_oldhaka_block_3.png",
+      "triangles": 1694,
+      "budget": 3000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 37,
+      "name": "bld_oldhaka_block_4",
+      "type": "models",
+      "file": "models/bld_oldhaka_block_4.glb",
+      "bytes": 3029968,
+      "sha256": "16297da4570bf149d4fb0d82cd9ab05f36b9e283f2f9bdab548c8910d9afee4d",
+      "preview": "previews/bld_oldhaka_block_4.png",
+      "triangles": 1640,
+      "budget": 3500,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 38,
+      "name": "bld_mosque",
+      "type": "models",
+      "file": "models/bld_mosque.glb",
+      "bytes": 1522928,
+      "sha256": "98ffd9fd0e8ff597887f72022ef0b190909231fe5e9d1e4f26f920dc7a103b11",
+      "preview": "previews/bld_mosque.png",
+      "triangles": 2288,
+      "budget": 6000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 39,
+      "name": "char_kite_flyers",
+      "type": "models",
+      "file": "models/char_kite_flyers.glb",
+      "bytes": 1837772,
+      "sha256": "89aa8813eee132f53d91bffb4ba9e6308a9229f18a918d91b236bbab940703b8",
+      "preview": "previews/char_kite_flyers.png",
+      "triangles": 9882,
+      "budget": 12000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 40,
+      "name": "char_fire_breather",
+      "type": "models",
+      "file": "models/char_fire_breather.glb",
+      "bytes": 1917220,
+      "sha256": "a1ee25af81fe2d31877e62ea684e9f4284fe637968e33b3d366ce78ae2f42b6e",
+      "preview": "previews/char_fire_breather.png",
+      "triangles": 2890,
+      "budget": 6000,
+      "status": "Procedural model; art refinement needed"
+    },
+    {
+      "number": 41,
+      "name": "char_rooftop_rival_concept",
+      "type": "concepts",
+      "file": "concepts/char_rooftop_rival_concept.png",
+      "bytes": 1960051,
+      "sha256": "4f6fd1e3fbd35060c50784384ab3e85ad8a871002193454ba5fb7c68390e6cc7",
+      "preview": "concepts/char_rooftop_rival_concept.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "status": "Generated artwork"
+    },
+    {
+      "number": 42,
+      "name": "ui_rooftop_thumbnail",
+      "type": "ui",
+      "file": "ui/ui_rooftop_thumbnail.png",
+      "bytes": 2895648,
+      "sha256": "b51835af2e001ac4fb9ecf8e2a632b9d4200a845893967c5f6688aa62cac2e3a",
+      "preview": "ui/ui_rooftop_thumbnail.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "status": "Generated artwork"
+    },
+    {
+      "number": 43,
+      "name": "ui_rooftop_loading",
+      "type": "ui",
+      "file": "ui/ui_rooftop_loading.png",
+      "bytes": 2628096,
+      "sha256": "5f723a0930512ebcee05ade4b2ab5e90599da3dc2b391701a1a486b2b99ed8e1",
+      "preview": "ui/ui_rooftop_loading.png",
+      "size": [
+        1664,
+        936
+      ],
+      "status": "Generated artwork"
+    }
+  ]
+}
