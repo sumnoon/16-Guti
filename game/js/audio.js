@@ -1,6 +1,7 @@
-// Synthesised sound: pebble clacks, captures, and a quiet village ambience.
+// Synthesised sound: pebble clacks, captures, a quiet village ambience and the rooftop festival
+// (crowd murmur from the neighbouring roofs, firework pops, the fire-breathers' whoosh).
 export class Sfx {
-  constructor() { this.ctx = null; this.on = true; this.mode = 'day'; this.nextBird = 0; this.nextCricket = 0; }
+  constructor() { this.ctx = null; this.on = true; this.mode = 'day'; this.scene = 'village'; this.nextBird = 0; this.nextCricket = 0; }
 
   start() {
     if (this.ctx) { this.ctx.resume(); return; }
@@ -19,7 +20,55 @@ export class Sfx {
     const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 500;
     this.windGain = c.createGain(); this.windGain.gain.value = 0.05;
     src.connect(lp).connect(this.windGain).connect(this.master); src.start();
+    // crowd bed: band-passed noise that swells and fades slowly, like voices from many roofs
+    const crowd = c.createBufferSource(); crowd.buffer = this.noise; crowd.loop = true;
+    const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 650; bp.Q.value = 0.8;
+    const swell = c.createGain(); swell.gain.value = 0.5;
+    const lfo = c.createOscillator(); lfo.frequency.value = 0.07; const lfoG = c.createGain(); lfoG.gain.value = 0.35;
+    lfo.connect(lfoG).connect(swell.gain); lfo.start();
+    this.crowdGain = c.createGain(); this.crowdGain.gain.value = 0;
+    crowd.connect(bp).connect(swell).connect(this.crowdGain).connect(this.master); crowd.start();
+    this.setScene(this.scene);
     this.loop();
+  }
+
+  setScene(name) {
+    this.scene = name;
+    if (!this.ctx) return;
+    const t = this.ctx.currentTime, roof = name === 'rooftop';
+    this.crowdGain.gain.setTargetAtTime(roof ? 0.05 : 0, t, 0.8);
+    this.windGain.gain.setTargetAtTime(roof ? 0.03 : 0.05, t, 0.8);
+  }
+
+  // distant firework: the boom arrives after the flash (sound travels ~340 m/s), then a crackle
+  pop(dist = 60, big = false) {
+    const c = this.ctx; if (!c || !this.on) return; const t = c.currentTime + dist / 340;
+    const v = Math.min(1, 30 / dist) * (big ? 1.4 : 1);
+    const o = c.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(110, t); o.frequency.exponentialRampToValueAtTime(40, t + 0.35);
+    const g = c.createGain(); this.env(g, t, 0.005, 0.32 * v, 0.45);
+    o.connect(g).connect(this.master); o.start(t); o.stop(t + 0.5);
+    const n = c.createBufferSource(); n.buffer = this.noise;
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 900;
+    const g2 = c.createGain(); this.env(g2, t, 0.003, 0.25 * v, 0.3);
+    n.connect(lp).connect(g2).connect(this.master); n.start(t, Math.random()); n.stop(t + 0.4);
+    for (let i = 0; i < 7; i++) {
+      const s = t + 0.25 + Math.random() * 0.7;
+      const k = c.createBufferSource(); k.buffer = this.noise;
+      const hp = c.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 2500;
+      const g3 = c.createGain(); this.env(g3, s, 0.001, 0.05 * v, 0.03);
+      k.connect(hp).connect(g3).connect(this.master); k.start(s, Math.random()); k.stop(s + 0.05);
+    }
+  }
+
+  // a fire-breather's burst of flame
+  whoosh(dist = 15) {
+    const c = this.ctx; if (!c || !this.on) return; const t = c.currentTime;
+    const v = Math.min(1, 12 / dist);
+    const n = c.createBufferSource(); n.buffer = this.noise;
+    const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = 0.7;
+    bp.frequency.setValueAtTime(300, t); bp.frequency.linearRampToValueAtTime(1200, t + 0.4); bp.frequency.linearRampToValueAtTime(500, t + 1.2);
+    const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.16 * v, t + 0.15); g.gain.exponentialRampToValueAtTime(0.0001, t + 1.3);
+    n.connect(bp).connect(g).connect(this.master); n.start(t, Math.random()); n.stop(t + 1.4);
   }
 
   setOn(v) { this.on = v; if (this.master) this.master.gain.setTargetAtTime(v ? 0.9 : 0, this.ctx.currentTime, 0.1); }
@@ -94,7 +143,10 @@ export class Sfx {
   loop() {
     const c = this.ctx; if (!c) return;
     const t = c.currentTime;
-    if (this.on) {
+    if (this.on && this.scene === 'rooftop') {
+      // the odd distant bird at dusk; no crickets up here
+      if (this.mode === 'dusk' && t > this.nextBird) { this.bird(t + 0.05); this.nextBird = t + 6 + Math.random() * 10; }
+    } else if (this.on) {
       if (this.mode !== 'night' && t > this.nextBird) { this.bird(t + 0.05); this.nextBird = t + 2.5 + Math.random() * 7; }
       if (this.mode !== 'afternoon' && t > this.nextCricket) { this.cricket(t + 0.05); this.nextCricket = t + (this.mode === 'night' ? 0.7 + Math.random() * 1.2 : 3 + Math.random() * 5); }
     }

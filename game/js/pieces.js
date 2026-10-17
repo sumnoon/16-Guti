@@ -1,14 +1,20 @@
 // Guti meshes, move/capture animation, selection and move hints.
+// Every guti is drawn by instancing: one InstancedMesh per part of each model in use, plus one for
+// all the contact shadows. A piece only keeps plain Object3Ds (obj = place, mesh = tilt / spin / lift,
+// sh = shadow) that the animations move; draw() turns them into instance matrices every frame.
 import * as THREE from 'three';
 import { P1, P2, POINTS } from './rules.js';
 import { toWorld, SPACING } from './world.js';
 
 const SCALE = 1.6;
 const ease = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+const _m = new THREE.Matrix4(), _n = new THREE.Matrix4();
+const capacity = (n) => Math.max(16, 2 ** Math.ceil(Math.log2(Math.max(n, 1))));
 
 export const PIECE_SETS = {
-  pebbles: { name: 'River pebbles', p1: (k) => ['guti_pebble_variations', 'cream_variation_' + (1 + (k % 3))], p2: (k) => ['guti_pebble_variations', 'dark_variation_' + (1 + (k % 3))] },
-  village: { name: 'Clay & tamarind', p1: () => ['guti_clay_shard'], p2: () => ['guti_tamarind_seed'] },
+  pebbles: { name: 'River pebbles', colours: ['cream', 'slate'], p1: (k) => ['guti_pebble_variations', 'cream_variation_' + (1 + (k % 3))], p2: (k) => ['guti_pebble_variations', 'dark_variation_' + (1 + (k % 3))] },
+  village: { name: 'Clay & tamarind', colours: ['clay', 'tamarind'], p1: () => ['guti_clay_shard'], p2: () => ['guti_tamarind_seed'] },
+  rooftop: { name: 'Marbles & caps', colours: ['marbles', 'bottle caps'], p1: () => ['guti_marble_glass'], p2: () => ['guti_bottle_cap'] },
 };
 
 export class Pieces {
@@ -19,8 +25,16 @@ export class Pieces {
     this.all = [];
     this.anims = [];
     this.setName = 'pebbles';
-    this.shadowMat = new THREE.MeshBasicMaterial({ map: tex.shadow, transparent: true, depthWrite: false, opacity: 0.8 });
-    this.shadowGeo = new THREE.PlaneGeometry(0.06, 0.06).rotateX(-Math.PI / 2);
+    this.batches = new Map();        // model file/node -> { parts, list, meshes }
+    // Contact shadows: per-instance opacity (aShade) multiplies the soft shadow sprite's alpha.
+    this.shadowMat = new THREE.MeshBasicMaterial({ map: tex.shadow, transparent: true, depthWrite: false });
+    this.shadowMat.onBeforeCompile = (sh) => {
+      sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nattribute float aShade;\nvarying float vShade;')
+        .replace('#include <begin_vertex>', '#include <begin_vertex>\nvShade = aShade;');
+      sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vShade;')
+        .replace('#include <alphamap_fragment>', '#include <alphamap_fragment>\ndiffuseColor.a *= vShade;');
+    };
+    this.shadows = null;
     this.markGeo = new THREE.PlaneGeometry(0.05, 0.05).rotateX(-Math.PI / 2);
     this.glow = tex.glow;
     this.markers = new THREE.Group(); scene.add(this.markers);
@@ -35,34 +49,96 @@ export class Pieces {
     m.scale.setScalar(size / 0.05); m.renderOrder = 2; m.userData.base = opacity; return m;
   }
 
-  makeMesh(player, k) {
+  // The model a guti uses, as a batch of instanced parts shared by every guti using that model.
+  batchFor(player, k) {
     const set = PIECE_SETS[this.setName];
     const [file, node] = (player === P1 ? set.p1 : set.p2)(k);
+    const key = file + '/' + (node || '');
+    let b = this.batches.get(key);
+    if (b) return b;
     const src = node ? this.models[file].getObjectByName(node) : this.models[file];
-    // Wrap rather than reset the clone: quantized GLBs keep their dequantization transform on the node.
-    const m = new THREE.Group(); m.add(src.clone(true));
-    m.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-    return m;
+    // Each part keeps its transform relative to the model as a local matrix, src's own node transform
+    // included: quantized GLBs carry their dequantization scale / offset there.
+    const parts = [];
+    src.traverse((o) => {
+      if (!o.isMesh) return;
+      const local = new THREE.Matrix4();
+      for (let n = o; ; n = n.parent) { local.premultiply(_m.compose(n.position, n.quaternion, n.scale)); if (n === src) break; }
+      parts.push({ geometry: o.geometry, material: o.material, local, cast: !o.userData.noShadow });
+    });
+    b = { parts, list: [], meshes: [] };
+    this.batches.set(key, b);
+    return b;
   }
 
-  build(board) {
-    for (const p of this.all) this.group.remove(p.obj);
+  newPiece(player, k, point) {
+    const obj = new THREE.Object3D(), mesh = new THREE.Object3D(), sh = new THREE.Object3D();
+    sh.position.y = 0.0015;
+    const piece = { obj, mesh, sh, shade: 0.8, player, point, k, lift: 0, batch: this.batchFor(player, k) };
+    this.all.push(piece);
+    return piece;
+  }
+
+  // (Re)assign instance slots after the set of pieces changed.
+  rebatch() {
+    for (const b of this.batches.values()) b.list = [];
+    for (const p of this.all) { p.slot = p.batch.list.length; p.batch.list.push(p); }
+    for (const b of this.batches.values()) {
+      const n = b.list.length;
+      if (n > (b.meshes[0]?.instanceMatrix.count ?? 0)) {
+        for (const m of b.meshes) { this.group.remove(m); m.dispose(); }
+        b.meshes = b.parts.map((part) => {
+          const m = new THREE.InstancedMesh(part.geometry, part.material, capacity(n));
+          m.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+          m.castShadow = part.cast; m.receiveShadow = true; m.frustumCulled = false;
+          return m;
+        });
+      }
+      for (const m of b.meshes) { m.count = n; if (n) this.group.add(m); else this.group.remove(m); }
+    }
+    const n = this.all.length;
+    if (!this.shadows || n > this.shadows.instanceMatrix.count) {
+      if (this.shadows) { this.group.remove(this.shadows); this.shadows.geometry.dispose(); this.shadows.dispose(); }
+      const geo = new THREE.PlaneGeometry(0.06, 0.06).rotateX(-Math.PI / 2), cap = capacity(n);
+      geo.setAttribute('aShade', new THREE.InstancedBufferAttribute(new Float32Array(cap), 1).setUsage(THREE.DynamicDrawUsage));
+      this.shadows = new THREE.InstancedMesh(geo, this.shadowMat, cap);
+      this.shadows.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+      this.shadows.renderOrder = 1; this.shadows.frustumCulled = false;
+      this.group.add(this.shadows);
+    }
+    this.shadows.count = n;
+    this.dirty = false;
+    this.draw();
+  }
+
+  // Copy every piece's transforms into the instance buffers.
+  draw() {
+    const shade = this.shadows.geometry.attributes.aShade;
+    this.all.forEach((p, i) => {
+      p.obj.updateMatrix(); p.mesh.updateMatrix(); p.sh.updateMatrix();
+      _m.multiplyMatrices(p.obj.matrix, p.mesh.matrix);
+      p.batch.meshes.forEach((m, j) => m.setMatrixAt(p.slot, _n.multiplyMatrices(_m, p.batch.parts[j].local)));
+      this.shadows.setMatrixAt(i, _n.multiplyMatrices(p.obj.matrix, p.sh.matrix));
+      shade.array[i] = p.shade;
+    });
+    for (const b of this.batches.values()) if (b.list.length) for (const m of b.meshes) m.instanceMatrix.needsUpdate = true;
+    this.shadows.instanceMatrix.needsUpdate = true; shade.needsUpdate = true;
+  }
+
+  build(board) { this.place(board); this.rebatch(); }
+
+  place(board) {
     this.all = []; this.byPoint.clear(); this.anims = [];
     this.captured = { [P1]: 0, [P2]: 0 };
     let k1 = 0, k2 = 0;
     board.forEach((v, i) => {
       if (!v) return;
       const k = v === P1 ? k1++ : k2++;
-      const obj = new THREE.Group();
-      const mesh = this.makeMesh(v, k);
-      mesh.scale.setScalar(SCALE * (0.94 + ((k * 37) % 11) / 100));
-      mesh.rotation.y = (k * 2.399) % (Math.PI * 2);
-      const sh = new THREE.Mesh(this.shadowGeo, this.shadowMat.clone()); sh.position.y = 0.0015; sh.renderOrder = 1;
-      obj.add(mesh, sh);
-      obj.position.copy(toWorld(i));
-      this.group.add(obj);
-      const piece = { obj, mesh, sh, player: v, point: i, k, lift: 0 };
-      this.all.push(piece); this.byPoint.set(i, piece);
+      const piece = this.newPiece(v, k, i);
+      piece.mesh.scale.setScalar(SCALE * (0.94 + ((k * 37) % 11) / 100));
+      piece.mesh.rotation.y = (k * 2.399) % (Math.PI * 2);
+      piece.obj.position.copy(toWorld(i));
+      this.byPoint.set(i, piece);
     });
     this.selected = -1; this.selRing.visible = false; this.clearHints();
     this.lastFrom.visible = this.lastTo.visible = false;
@@ -72,10 +148,11 @@ export class Pieces {
 
   // Snap visuals to a board (after undo / restore). Captured pieces go to the piles.
   sync(board) {
-    this.build(board);
+    this.place(board);
     const c1 = 16 - board.filter((v) => v === P1).length, c2 = 16 - board.filter((v) => v === P2).length;
     for (let i = 0; i < c2; i++) this.addToPile(P1, P2, true);
     for (let i = 0; i < c1; i++) this.addToPile(P2, P1, true);
+    this.rebatch();
   }
 
   pilePos(owner, n) {
@@ -88,11 +165,10 @@ export class Pieces {
   addToPile(owner, victimPlayer, instant) {
     const n = this.captured[owner]++;
     if (!instant) return this.pilePos(owner, n);
-    const obj = new THREE.Group();
-    const mesh = this.makeMesh(victimPlayer, n); mesh.scale.setScalar(SCALE); mesh.rotation.y = n * 1.7;
-    const sh = new THREE.Mesh(this.shadowGeo, this.shadowMat.clone()); sh.position.y = 0.0015;
-    obj.add(mesh, sh); obj.position.copy(this.pilePos(owner, n)); this.group.add(obj);
-    this.all.push({ obj, mesh, sh, player: victimPlayer, point: -1, k: n, lift: 0, dead: true });
+    const p = this.newPiece(victimPlayer, n, -1); p.dead = true;
+    p.mesh.scale.setScalar(SCALE); p.mesh.rotation.y = n * 1.7;
+    p.obj.position.copy(this.pilePos(owner, n));
+    this.dirty = true;
   }
 
   pieceAt(i) { return this.byPoint.get(i); }
@@ -154,11 +230,11 @@ export class Pieces {
           p.obj.position.lerpVectors(A, B, e);
           p.obj.position.y = Math.sin(Math.PI * e) * height;
           p.mesh.rotation.z = Math.sin(Math.PI * e) * 0.25 * (B.x - A.x > 0 ? -1 : 1);
-          p.sh.position.y = 0.0015 - p.obj.position.y; p.sh.material.opacity = 0.8 - p.obj.position.y * 6;
+          p.sh.position.y = 0.0015 - p.obj.position.y; p.shade = 0.8 - p.obj.position.y * 6;
           if (victim && !hitDone && e > 0.5) { hitDone = true; this.knock(victim, p.player, opts); }
         },
         done: () => {
-          p.obj.position.copy(B); p.mesh.rotation.z = 0; p.sh.position.y = 0.0015; p.sh.material.opacity = 0.8;
+          p.obj.position.copy(B); p.mesh.rotation.z = 0; p.sh.position.y = 0.0015; p.shade = 0.8;
           this.bounce(p);
           this.sfx && this.sfx.clack(isCap ? 0.9 : 0.7);
           this.markLast(action.from, action.to);
@@ -181,9 +257,9 @@ export class Pieces {
         v.obj.position.lerpVectors(start, end, e);
         v.obj.position.y = Math.sin(Math.PI * t) * 0.12;
         v.mesh.rotation.x = e * spin; v.mesh.rotation.z = e * spin * 0.5;
-        v.sh.position.y = 0.0015 - v.obj.position.y; v.sh.material.opacity = 0.8 - v.obj.position.y * 5;
+        v.sh.position.y = 0.0015 - v.obj.position.y; v.shade = 0.8 - v.obj.position.y * 5;
       },
-      done: () => { v.obj.position.copy(end); v.mesh.rotation.x = Math.PI * Math.round(spin / Math.PI) ; v.mesh.rotation.z = 0; v.sh.position.y = 0.0015; v.sh.material.opacity = 0.8; this.bounce(v); this.sfx && this.sfx.clack(0.4); },
+      done: () => { v.obj.position.copy(end); v.mesh.rotation.x = Math.PI * Math.round(spin / Math.PI) ; v.mesh.rotation.z = 0; v.sh.position.y = 0.0015; v.shade = 0.8; this.bounce(v); this.sfx && this.sfx.clack(0.4); },
     });
   }
 
@@ -206,10 +282,11 @@ export class Pieces {
       const target = p.lift ? 0.016 + Math.sin(this.time * 4) * 0.003 : 0;
       if (!this.busy || p.lift) {
         p.mesh.position.y += (target - p.mesh.position.y) * Math.min(1, dt * 12);
-        p.sh.material.opacity = 0.8 - p.mesh.position.y * 14;
+        p.shade = 0.8 - p.mesh.position.y * 14;
         p.sh.scale.setScalar(1 + p.mesh.position.y * 18);
       }
     }
+    if (this.dirty) this.rebatch(); else this.draw();
     const pulse = 0.75 + Math.sin(this.time * 4) * 0.25;
     this.selRing.material.opacity = 0.7 * pulse;
     for (const m of this.markers.children) m.material.opacity = (m.userData.base ?? 0.8) * (0.65 + Math.sin(this.time * 4 + (m.userData.phase || 0)) * 0.35);

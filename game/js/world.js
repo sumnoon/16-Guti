@@ -1,5 +1,6 @@
 // Village Uthan environment: sky, ground (with the board carved into it), props,
-// lighting, time of day and ambient life.
+// lighting, time of day and ambient life. Also the helpers other environments share
+// (sky, time-of-day blending, instancing, prop placement).
 import * as THREE from 'three';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { POINTS, EDGES } from './rules.js';
@@ -16,6 +17,23 @@ export const TIMES = {
   night:     { pano: 'night',     sun: 0x9db4ff, sunI: 1.1, elev: 38, sky: 0x3a5088, ground: 0x221d1a, hemiI: 0.6, fog: 0x141c30, exp: 1.25, env: 0.35, lantern: 1.3, dust: 0, flies: 1, bright: 0.9 },
 };
 
+// What main.js needs to load, show and say for this environment.
+export const VILLAGE = {
+  id: 'village', name: 'Village Uthan',
+  models: ['prop_banyan_tree', 'prop_house', 'prop_fence', 'prop_haystack', 'prop_banana_tree', 'prop_chula', 'prop_pots', 'prop_kolshi',
+    'prop_chouki', 'prop_dala', 'prop_kula', 'prop_clothesline', 'prop_jharu', 'prop_pati', 'prop_piri', 'prop_lantern', 'prop_chicken'],
+  textures: { mud: 'ground_mud.jpg', mudN: ['ground_mud_n.jpg', false], rough: 'ground_rough.jpg' },
+  panos: { afternoon: 'pano_afternoon.jpg', sunset: 'pano_sunset.jpg', night: 'pano_night.jpg' },
+  times: { afternoon: 'Afternoon', sunset: 'Sunset', night: 'Night' }, defaultTime: 'afternoon',
+  opponent: { name: 'Dadu', avatar: 'dadu', praise: '“Shabash!” says Dadu.' },
+  loading: 'assets/ui/loading.jpg', loadMsg: 'Setting up the courtyard…',
+  lede: 'Sit down on the pati under the banyan. Jump over Dadu’s guti to capture them, and take all sixteen to win.',
+  aria: '3D Sholo Guti board in a village courtyard',
+  orbit: { r: 6.2, y: 2.1, target: [0, 0.6, -2.5] },
+  sound: 'village',
+  build: (o) => buildWorld(o),
+};
+
 // ---------------------------------------------------------------- textures
 function radialTexture(size, stops) {
   const c = document.createElement('canvas'); c.width = c.height = size;
@@ -28,7 +46,7 @@ function radialTexture(size, stops) {
 export const makeSoftShadowTex = () => radialTexture(64, [[0, 'rgba(0,0,0,0.75)'], [0.45, 'rgba(0,0,0,0.35)'], [1, 'rgba(0,0,0,0)']]);
 export const makeGlowTex = () => radialTexture(64, [[0, 'rgba(255,255,255,1)'], [0.25, 'rgba(255,255,255,0.55)'], [1, 'rgba(255,255,255,0)']]);
 
-function seeded(seed) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+export function seeded(seed) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
 
 // Height map of the board scratched into mud. 0.5 = flat, darker = groove, lighter = rim.
 function makeBoardHeight() {
@@ -87,14 +105,17 @@ function makeBoardHeight() {
 }
 
 // ---------------------------------------------------------------- sky
-function makeSky(panos) {
+// panoSunU: where the sun sits across the panorama (0..1); sunDir: where it should appear in the world.
+// uHaze fades the lower part of the panorama into the fog colour (the rooftop looks down into alleys).
+export function makeSky(pano, panoSunU = 0.14, sunDir = SUN_DIR) {
   const mat = new THREE.ShaderMaterial({
-    uniforms: { uA: { value: panos.afternoon }, uB: { value: panos.afternoon }, uMix: { value: 0 }, uYaw: { value: 0 }, uBright: { value: 1 } },
+    uniforms: { uA: { value: pano }, uB: { value: pano }, uMix: { value: 0 }, uYaw: { value: 0 }, uBright: { value: 1 }, uHaze: { value: new THREE.Color(0) }, uHazeAmt: { value: 0 } },
     vertexShader: `varying vec3 vDir; void main(){ vDir = position; vec4 p = projectionMatrix * modelViewMatrix * vec4(position,1.0); gl_Position = p.xyww; }`,
-    fragmentShader: `uniform sampler2D uA; uniform sampler2D uB; uniform float uMix; uniform float uYaw; uniform float uBright; varying vec3 vDir;
+    fragmentShader: `uniform sampler2D uA; uniform sampler2D uB; uniform float uMix; uniform float uYaw; uniform float uBright; uniform vec3 uHaze; uniform float uHazeAmt; varying vec3 vDir;
       void main(){ vec3 d = normalize(vDir); float a = atan(d.z, d.x) + uYaw;
         vec2 uv = vec2(fract(a / 6.2831853 + 0.5), asin(clamp(d.y,-1.0,1.0)) / 3.14159265 + 0.5);
         vec3 c = mix(texture2D(uA, uv).rgb, texture2D(uB, uv).rgb, uMix) * uBright;
+        c = mix(c, uHaze, uHazeAmt * (1.0 - smoothstep(-0.3, -0.05, d.y)));
         gl_FragColor = vec4(c, 1.0);
         #include <colorspace_fragment>
       }`,
@@ -102,9 +123,9 @@ function makeSky(panos) {
   });
   const m = new THREE.Mesh(new THREE.SphereGeometry(400, 48, 24), mat);
   m.frustumCulled = false; m.renderOrder = -10;
-  // Rotate the panorama so its sun lines up with the scene's sun (pano sun at u≈0.14).
-  const panoAngle = (0.14 - 0.5) * Math.PI * 2;
-  const worldAngle = Math.atan2(SUN_DIR.z, SUN_DIR.x);
+  // Rotate the panorama so its sun lines up with the scene's sun.
+  const panoAngle = (panoSunU - 0.5) * Math.PI * 2;
+  const worldAngle = Math.atan2(sunDir.z, sunDir.x);
   mat.uniforms.uYaw.value = panoAngle - worldAngle;
   return m;
 }
@@ -189,7 +210,7 @@ function makeSmoke(glow, count) {
   return group;
 }
 
-function makePoints(count, color, size, spread, centre, glow, additive = true) {
+export function makePoints(count, color, size, spread, centre, glow, additive = true) {
   const geo = new THREE.BufferGeometry();
   const p = new Float32Array(count * 3), seed = new Float32Array(count);
   for (let i = 0; i < count; i++) {
@@ -211,7 +232,7 @@ function makePoints(count, color, size, spread, centre, glow, additive = true) {
 // Replace many placed copies of one model with one InstancedMesh per mesh: a single draw call each
 // instead of one per copy (the fence ring is ~38 copies). Each instance keeps its own placement and
 // the mesh's own node transform (which carries the quantization scale).
-function instanced(scene, copies) {
+export function instanced(scene, copies) {
   if (copies.length < 2) return;
   for (const c of copies) c.updateMatrixWorld(true);
   const parts = []; copies[0].traverse((m) => { if (m.isMesh) parts.push(m); });
@@ -224,15 +245,64 @@ function instanced(scene, copies) {
   for (const c of copies) scene.remove(c);
 }
 
-function placeProps(scene, M, rnd, quality) {
-  const put = (name, x, z, ry = 0, s = 1, opt = {}) => {
+// put(name, x, z, ry, scale, { node, y, shadow, center }) places a copy of a model.
+// It places a wrapper: quantized GLBs keep their dequantization transform on the picked node.
+// center: move a named node back over the origin (multi-object files lay their objects out side by side).
+export function makePut(scene, M) {
+  return (name, x, z, ry = 0, s = 1, opt = {}) => {
     const src = M[name]; if (!src) return null;
-    // Place a wrapper: quantized GLBs keep their dequantization transform on the picked node.
-    const o = new THREE.Group(); o.add((opt.node ? src.getObjectByName(opt.node) : src).clone(true));
+    const o = new THREE.Group(), c = (opt.node ? src.getObjectByName(opt.node) : src).clone(true);
+    if (opt.center) {
+      const inner = new THREE.Group(); inner.add(c); inner.updateMatrixWorld(true);
+      const b = new THREE.Box3().setFromObject(inner), mid = b.getCenter(new THREE.Vector3());
+      inner.position.set(-mid.x, -b.min.y, -mid.z); o.add(inner);
+    } else o.add(c);
     o.position.set(x, opt.y || 0, z); o.rotation.y = ry; o.scale.setScalar(s);
     o.traverse((m) => { if (m.isMesh) { m.castShadow = opt.shadow !== false; m.receiveShadow = true; } });
     scene.add(o); return o;
   };
+}
+
+// Blend between time-of-day presets. Numbers lerp, colorKeys lerp as colours; 'pano' names the panorama.
+// apply(v) receives the blended values plus panoA / panoB / mix for cross-fading the sky.
+export function makeTimeline(times, colorKeys, apply) {
+  const cA = new THREE.Color(), cB = new THREE.Color();
+  let from = null, to = null, k = 1, name = null;
+  const blend = (t) => {
+    const v = { panoA: from.pano, panoB: to.pano, mix: t };
+    for (const key in to) {
+      if (key === 'pano') continue;
+      v[key] = colorKeys.includes(key) ? cA.set(from[key]).lerp(cB.set(to[key]), t).getHex() : from[key] + (to[key] - from[key]) * t;
+    }
+    return v;
+  };
+  const ease = () => THREE.MathUtils.smootherstep(k, 0, 1);
+  return {
+    get name() { return name; },
+    set(n, instant = false) {
+      if (!times[n]) return;
+      if (instant || !from) from = { ...times[n] };
+      else { const v = blend(ease()); from = { ...v, pano: v.mix > 0.5 ? to.pano : from.pano }; }
+      to = times[n]; name = n; k = instant ? 1 : 0;
+      apply(blend(ease()));
+    },
+    update(dt) { if (k < 1) { k = Math.min(1, k + dt / 2.5); apply(blend(ease())); } },
+  };
+}
+
+// Free a world's GPU resources once it is removed (models stay cached on the CPU side for a quick return).
+export function disposeTree(root) {
+  root.traverse((o) => {
+    if (o.geometry) o.geometry.dispose();
+    for (const m of [].concat(o.material || [])) {
+      for (const k in m) if (m[k] && m[k].isTexture) m[k].dispose();
+      m.dispose();
+    }
+  });
+}
+
+function placeProps(scene, M, rnd, quality) {
+  const put = makePut(scene, M);
   const out = {};
   out.banyan = put('prop_banyan_tree', -7.8, -5.8, 0.6, 1);
   put('prop_house', 8.6, -6.2, -Math.PI / 2 + 0.25, 1);
@@ -363,7 +433,9 @@ function makeChickens(scene, src, n) {
 }
 
 // ---------------------------------------------------------------- build
-export function buildWorld({ renderer, scene, tex, models, quality }) {
+export function buildWorld({ renderer, scene: realScene, tex, models, quality }) {
+  // Everything the village adds lives under one group, so switching environments removes it in one go.
+  const scene = new THREE.Group(); realScene.add(scene);
   const rnd = seeded(7);
   const glow = makeGlowTex();
   const board = makeBoardHeight();
@@ -374,10 +446,10 @@ export function buildWorld({ renderer, scene, tex, models, quality }) {
     envs[k] = pmrem.fromEquirectangular(t).texture;
   }
 
-  const sky = makeSky(tex.pano); scene.add(sky);
-  scene.environment = envs.afternoon;
-  scene.environmentRotation.y = -sky.material.uniforms.uYaw.value;
-  scene.fog = new THREE.Fog(0xd8c39f, 30, 120);
+  const sky = makeSky(tex.pano.afternoon); scene.add(sky);
+  realScene.environment = envs.afternoon;
+  realScene.environmentRotation.y = -sky.material.uniforms.uYaw.value;
+  realScene.fog = new THREE.Fog(0xd8c39f, 30, 120);
 
   const ground = makeGround(tex, board); scene.add(ground);
 
@@ -430,49 +502,37 @@ export function buildWorld({ renderer, scene, tex, models, quality }) {
   const chickens = makeChickens(scene, models.prop_chicken, quality > 0 ? 5 : 3);
 
   // ---- time of day blending
-  const cur = { ...TIMES.afternoon };
-  let from = { ...TIMES.afternoon }, to = TIMES.afternoon, tBlend = 1, timeName = 'afternoon';
-  const cA = new THREE.Color(), cB = new THREE.Color();
-  const lerpCol = (a, b, t) => cA.set(a).lerp(cB.set(b), t).getHex();
-  function applyTime(t) {
-    const L = (k) => from[k] + (to[k] - from[k]) * t;
-    const elev = THREE.MathUtils.degToRad(L('elev'));
+  const cur = { lantern: 0, dust: 1, flies: 0 };
+  const timeline = makeTimeline(TIMES, ['sun', 'sky', 'ground', 'fog'], (v) => {
+    const elev = THREE.MathUtils.degToRad(v.elev);
     const dir = new THREE.Vector3(SUN_DIR.x * Math.cos(elev), Math.sin(elev), SUN_DIR.z * Math.cos(elev));
     sun.position.copy(sun.target.position).addScaledVector(dir, 40);
-    sun.color.set(lerpCol(from.sun, to.sun, t)); sun.intensity = L('sunI');
-    hemi.color.set(lerpCol(from.sky, to.sky, t)); hemi.groundColor.set(lerpCol(from.ground, to.ground, t)); hemi.intensity = L('hemiI');
-    scene.fog.color.set(lerpCol(from.fog, to.fog, t));
-    renderer.toneMappingExposure = L('exp');
-    scene.environmentIntensity = L('env');
-    cur.lantern = L('lantern'); cur.dust = L('dust'); cur.flies = L('flies');
-    sky.material.uniforms.uMix.value = t; sky.material.uniforms.uBright.value = L('bright');
-  }
-  function setTime(name, instant = false) {
-    if (!TIMES[name]) return;
-    timeName = name;
-    from = instant ? { ...TIMES[name] } : snapshot();
-    to = TIMES[name];
-    sky.material.uniforms.uA.value = tex.pano[from.pano || to.pano];
-    sky.material.uniforms.uB.value = tex.pano[to.pano];
-    scene.environment = envs[to.pano];
-    tBlend = instant ? 1 : 0;
-    applyTime(instant ? 1 : 0);
-  }
-  function snapshot() {
-    const s = { pano: sky.material.uniforms.uMix.value > 0.5 ? (to.pano) : (from.pano || to.pano) };
-    const t = tBlend;
-    for (const k of ['sunI', 'elev', 'hemiI', 'exp', 'env', 'lantern', 'dust', 'flies', 'bright']) s[k] = from[k] + (to[k] - from[k]) * t;
-    for (const k of ['sun', 'sky', 'ground', 'fog']) s[k] = lerpCol(from[k], to[k], t);
-    return s;
-  }
+    sun.color.set(v.sun); sun.intensity = v.sunI;
+    hemi.color.set(v.sky); hemi.groundColor.set(v.ground); hemi.intensity = v.hemiI;
+    realScene.fog.color.set(v.fog);
+    renderer.toneMappingExposure = v.exp;
+    realScene.environmentIntensity = v.env;
+    realScene.environment = envs[v.panoB];
+    cur.lantern = v.lantern; cur.dust = v.dust; cur.flies = v.flies;
+    const u = sky.material.uniforms;
+    u.uA.value = tex.pano[v.panoA]; u.uB.value = tex.pano[v.panoB]; u.uMix.value = v.mix; u.uBright.value = v.bright;
+  });
+  const setTime = (name, instant = false) => timeline.set(name, instant);
   setTime('afternoon', true);
 
   let wind = 1;
   return {
-    sun, ground, chickens, timeName: () => timeName, setTime,
+    sun, ground, chickens, timeName: () => timeline.name, setTime,
     dropLeaves,
+    // captures scatter the chickens and shake a few leaves down
+    react(at, slow) { chickens.scare(at, 6); dropLeaves(slow ? 7 : 3, at); },
+    dispose() {
+      realScene.remove(scene); disposeTree(scene);
+      for (const k in envs) envs[k].dispose();
+      pmrem.dispose(); realScene.environment = null; realScene.fog = null;
+    },
     update(dt, t) {
-      if (tBlend < 1) { tBlend = Math.min(1, tBlend + dt / 2.5); applyTime(THREE.MathUtils.smootherstep(tBlend, 0, 1)); }
+      timeline.update(dt);
       wind = 0.8 + Math.sin(t * 0.13) * 0.3;
       if (props.banyan) props.banyan.rotation.z = Math.sin(t * 0.6) * 0.004 * wind;
       smoke.update(dt, wind);

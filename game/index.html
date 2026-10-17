@@ -89,9 +89,10 @@ body.playing .hud * { pointer-events: auto; }
 #card2 { justify-self: end; flex-direction: row-reverse; text-align: right; padding: 8px 8px 8px 12px; }
 .avatar { width: 38px; height: 38px; border-radius: 50%; flex: none; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #fff8e8, #d9c9a8 60%, #a8977a); box-shadow: inset 0 -3px 6px rgba(0,0,0,.25); }
 #avatar2 { background: radial-gradient(circle at 35% 30%, #8a96a0, #4c5862 60%, #2c343b); }
-#avatar2.dadu { background: #e9dcc4 url("assets/ui/dadu.jpg") 30% 7% / 560% auto no-repeat; }
+#avatar2.opp[data-opp="dadu"] { background: #e9dcc4 url("assets/ui/dadu.jpg") 30% 7% / 560% auto no-repeat; }
+#avatar2.opp[data-opp="rival"] { background: #6b2a3a url("assets/ui/rival.jpg") center / cover no-repeat; }
 body[data-pieces="village"] #avatar1 { background: radial-gradient(circle at 35% 30%, #e08a5c, #b0562e 60%, #7a3a1e); }
-body[data-pieces="village"] #avatar2:not(.dadu) { background: radial-gradient(circle at 35% 30%, #7a4a2c, #3a1e0e 60%, #1e0e06); }
+body[data-pieces="village"] #avatar2:not(.opp) { background: radial-gradient(circle at 35% 30%, #7a4a2c, #3a1e0e 60%, #1e0e06); }
 .who { display: grid; gap: 3px; min-width: 0; }
 .who b { font-weight: 600; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pips { display: grid; grid-template-columns: repeat(8, 7px); gap: 3px; }
@@ -100,6 +101,10 @@ body[data-pieces="village"] #avatar2:not(.dadu) { background: radial-gradient(ci
 .pips[data-player="2"] i { background: #6d7983; }
 body[data-pieces="village"] .pips[data-player="1"] i { background: #c46a3e; }
 body[data-pieces="village"] .pips[data-player="2"] i { background: #4a2614; box-shadow: inset 0 0 0 1px rgba(245,232,204,.3); }
+body[data-pieces="rooftop"] #avatar1 { background: radial-gradient(circle at 35% 30%, #ffffff, #b9dcea 45%, #5d8ea3); }
+body[data-pieces="rooftop"] #avatar2:not(.opp) { background: radial-gradient(circle at 35% 30%, #f0a0a0, #c0302a 55%, #6e1712); }
+body[data-pieces="rooftop"] .pips[data-player="1"] i { background: #bfe2ee; }
+body[data-pieces="rooftop"] .pips[data-player="2"] i { background: #c8352c; }
 .pips i.gone { opacity: .16; transform: scale(.7); }
 #status { justify-self: center; align-self: center; text-align: center; padding: 7px 14px; border-radius: 999px; background: var(--soil-a); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); font-size: 14px; max-width: 34ch; }
 #drawnote { position: fixed; top: calc(70px + env(safe-area-inset-top, 0px)); left: 50%; transform: translateX(-50%); font-size: 12.5px; color: var(--straw); background: var(--soil-a); padding: 4px 10px; border-radius: 999px; z-index: 10; }
@@ -137,6 +142,7 @@ body[data-pieces="village"] .pips[data-player="2"] i { background: #4a2614; box-
   .tool { min-width: 50px; padding: 6px 7px 4px; }
   #drawnote { top: calc(104px + env(safe-area-inset-top, 0px)); }
 }
+@media (max-width: 420px) { .seg button { font-size: 12.5px; padding: 7px 3px; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -155,20 +161,23 @@ body[data-pieces="village"] .pips[data-player="2"] i { background: #4a2614; box-
     <div class="brand">
       <div class="bn" lang="bn">ষোল গুটি</div>
       <div class="en">Sholo Guti</div>
-      <div class="place">Village Uthan · 37 points · 16 guti each</div>
+      <div class="place" id="place">Village Uthan · 37 points · 16 guti each</div>
     </div>
-    <p class="lede">Sit down on the pati under the banyan. Jump over Dadu’s guti to capture them, and take all sixteen to win.</p>
+    <p class="lede" id="lede">Sit down on the pati under the banyan. Jump over Dadu’s guti to capture them, and take all sixteen to win.</p>
     <div class="actions">
       <button class="btn primary" id="resume" hidden>Resume game</button>
       <button class="btn primary" id="playAI" disabled>Play Dadu <small>vs computer</small></button>
       <button class="btn" id="playLocal" disabled>Two players <small>same device</small></button>
     </div>
     <div class="opts">
-      <fieldset><legend>Dadu’s strength</legend>
+      <fieldset><legend>Place</legend>
+        <div class="seg" id="optEnv"><button data-v="village">Village Uthan</button><button data-v="rooftop">Old Dhaka Rooftop</button></div>
+      </fieldset>
+      <fieldset><legend id="levelLegend">Dadu’s strength</legend>
         <div class="seg" id="optLevel"><button data-v="easy">Easy</button><button data-v="medium">Medium</button><button data-v="hard">Hard</button></div>
       </fieldset>
       <fieldset><legend>Guti</legend>
-        <div class="seg" id="optPieces"><button data-v="pebbles">River pebbles</button><button data-v="village">Clay &amp; tamarind</button></div>
+        <div class="seg" id="optPieces"><button data-v="pebbles">River pebbles</button><button data-v="village">Clay &amp; tamarind</button><button data-v="rooftop">Marbles &amp; caps</button></div>
       </fieldset>
       <fieldset><legend>Time of day</legend>
         <div class="seg" id="optTime"><button data-v="afternoon">Afternoon</button><button data-v="sunset">Sunset</button><button data-v="night">Night</button></div>

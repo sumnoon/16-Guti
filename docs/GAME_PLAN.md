@@ -29,7 +29,7 @@ and AI (`ai.js`) are small and easy to port to C#. The optimized models in `game
 4. Sundarbans. Mangrove deck at dusk, fireflies, distant deer.
 5. Mughal Courtyard. Marble inlaid board, fountain, Lalbagh-style arches.
 6. Cox's Bazar Sunset. Board drawn in sand, waves, golden hour.
-7. Old Dhaka Rooftop Night. Shakrain kites, string lights, skyline.
+7. **Old Dhaka Rooftop.** Shakrain kites, string lights, skyline, fire-breathers, fireworks, sky lanterns. **Built second** (dusk and night; opponent Rana). Models are procedural first passes, see `art/rooftop_README.md`.
 
 ## Responsive world
 
@@ -45,7 +45,7 @@ and AI (`ai.js`) are small and easy to port to C#. The optimized models in `game
 
 ## Pieces
 
-River pebbles (3 shapes per colour) and clay shard vs tamarind seed are in. Planned: carved wood, terracotta,
+River pebbles (3 shapes per colour), clay shard vs tamarind seed, and glass marbles vs bottle caps (rooftop) are in. Planned: carved wood, terracotta,
 brass, cowries, marble and onyx. Ideally scan real pebbles and seeds with a phone (Polycam, RealityScan).
 
 ## Making it enjoyable
@@ -70,7 +70,7 @@ brass, cowries, marble and onyx. Ideally scan real pebbles and seeds with a phon
 | 2 AI and UX | Minimax AI, highlights, undo | Done (tutorial still to do) |
 | 3 First environment | Village Uthan, 2 piece sets, sound | First pass done. Models need art polish |
 | 4 Responsiveness | Time cycle, capture reactions, quality tiers | Mostly done |
-| 5 Content | More environments and piece sets | Next |
+| 5 Content | More environments and piece sets | In progress (Old Dhaka Rooftop, marbles & caps done) |
 | 6 Online and polish | Matchmaking, campaign, optimization | Later |
 | 7 Launch | Android first, then iOS, PC and web | Later |
 
