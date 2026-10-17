@@ -1,7 +1,8 @@
 # ষোল গুটি · Sholo Guti
 
 A 3D version of Sholo Guti, the traditional Bangladeshi 16-piece board game, played in realistic, living environments.
-The first environment, **Village Uthan** (a mud courtyard under a banyan tree), is playable in the browser.
+Two environments are playable in the browser: **Village Uthan** (a mud courtyard under a banyan tree) and
+**Old Dhaka Rooftop** (a Puran Dhaka roof during Shakrain, the kite festival). Pick the place in the menu.
 
 ![Seated view, afternoon](docs/screenshots/seat-afternoon.jpg)
 
@@ -25,10 +26,11 @@ Any static web host works too (GitHub Pages: serve the `game/` folder).
 ## What works now
 
 - Full rules on the real 37-point board: steps, jump captures, chain captures, win by capture or blockade, draw after 60 quiet moves.
-- Play **Dadu** (computer) at Easy, Medium or Hard, or two players on one device (the view turns to face each player).
-- Settings: captures optional or forced, River pebbles or Clay & tamarind guti, afternoon / sunset / night, graphics quality.
+- Play the computer at Easy, Medium or Hard (**Dadu** in the village, **Rana**, champion of the next roof, on the rooftop), or two players on one device (the view turns to face each player).
+- Settings: place, captures optional or forced, River pebbles, Clay & tamarind or Marbles & bottle caps guti, time of day (afternoon / sunset / night in the village, dusk / night on the roof), graphics quality.
 - The board is carved into the mud by a shader, drawn from the same data the rules use, so the picture can never disagree with the moves.
 - Living courtyard: chickens wander and scatter on captures, leaves fall, chula smoke, dust in sunbeams, fireflies and a flickering lantern at night, birds by day, crickets at night.
+- Festive rooftop: the board is chalked on the cement between jute mats; hundreds of kites over the city (now and then one is cut loose and drifts away), neighbours flying kites from the roofs around, string lights and paper lanterns, lit windows, a fire-breather on the next roof, fireworks, rising sky lanterns, a crowd murmur. Captures throw sparks; long chains set off fireworks.
 - Move hints (gold), jump arcs (orange), undo, top/seat camera, orbit and zoom, phone and desktop layouts.
 
 ## Repository layout
@@ -40,18 +42,20 @@ game/                    the playable game (static files, no build step)
   js/rules.js            rules engine: board graph, moves, jumps, chains, win/draw. No graphics
   js/ai.js               Dadu: negamax + alpha-beta, iterative deepening, capture quiescence
   js/ai-worker.js        runs the AI off the main thread
-  js/world.js            environment: sky, carved-board ground shader, props layout, lights, time of day, particles, chickens
+  js/world.js            Village Uthan: sky, carved-board ground shader, props layout, lights, time of day, particles, chickens;
+                         plus the helpers every environment shares (sky, time-of-day blending, prop placement, instancing)
+  js/rooftop.js          Old Dhaka Rooftop: chalk board, roof and neighbouring houses, kites, string lights, fireworks, fire-breather
   js/pieces.js           guti meshes, hop/capture animations, move hints, capture piles
   js/audio.js            synthesised sounds (no audio files)
   js/main.js             renderer, loading, camera, input, turn flow, UI
   assets/models/*.json   models as base64-wrapped GLB (served by any host, incl. Claude artifacts)
   assets/models-glb/     the same optimized models as plain .glb, for Unity / Godot / Blender
-  assets/tex/            seamless ground textures + normal maps, the three panoramas
-  assets/ui/             loading art, Dadu portrait, app icons
+  assets/tex/            seamless textures + normal maps, panoramas, effect sprite sheets, kite atlas
+  assets/ui/             loading art, Dadu and Rana portraits, app icons
   vendor/                three.js r169 and the fonts, bundled for offline play
   manifest.webmanifest   installable web app; sw.js caches it for offline use
-art/                     original source art for Village Uthan (from ChatGPT), full resolution
-  art_bible.txt          art direction: palette, materials, lighting, rules
+art/                     original source art (Village Uthan, Old Dhaka Rooftop), full resolution
+  art_bible.txt          art direction: palette, materials, lighting, rules (rooftop_art_bible.txt for the roof)
   concepts/              concept art + the exact prompts used
   textures/ panoramas/ models/ ui/ previews/ production/
 tools/                   asset pipeline, tests, screenshot tool
@@ -101,7 +105,7 @@ Then convert `art/` into the game's files:
 cd tools
 npm install
 pip install -r requirements.txt
-python prepare_assets.py
+python prepare_assets.py            (or: prepare_assets.py village / prepare_assets.py rooftop)
 ```
 
 ### Run tests
@@ -118,7 +122,7 @@ See [docs/GAME_PLAN.md](docs/GAME_PLAN.md) for the full plan. The most useful ne
 
 1. **Better models** for the banyan, house and chickens. These are low-poly first passes, and the banyan's hanging roots cast long stripe shadows across the courtyard. Replace files in `art/models/` (keep names, metres, bottom-centre origin) and run `prepare_assets.py`.
 2. **Tutorial**: Dadu teaches the rules step by step in the courtyard (`window.__game.loadPosition` already sets up any position).
-3. **Second environment**: Monsoon Ghat. Generate art with the prompts in `docs/ASSET_PROMPTS.md`, then add a new environment module alongside `world.js`.
+3. **Next environment**: Monsoon Ghat. Generate art with the prompts in `docs/ASSET_PROMPTS.md`, then add a module like `rooftop.js` and register it in `ENVS` in `main.js`.
 4. **Bangla interface** and voice lines.
 5. **Port to Unity (URP)** for an Android release. `rules.js` and `ai.js` are small and port directly to C#. The models in `assets/models-glb/` import as they are.
 

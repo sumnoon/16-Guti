@@ -1,7 +1,8 @@
 // Offline cache for the installed web app (the Android app ships its files and does not use this).
 // Stale-while-revalidate: answer from the cache at once, refresh it in the background, so a new
-// release shows up on the next launch. The game requests every model and texture at start-up,
-// so one online visit is enough to play offline afterwards.
+// release shows up on the next launch. Each place (village, rooftop) loads its files when first shown;
+// main.js then fetches the other places' files in the background, so one online visit is enough to
+// play everywhere offline afterwards.
 const CACHE = 'sholo-guti-v1';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'vendor/three/build/three.module.min.js', 'vendor/fonts/fonts.css'];
 
